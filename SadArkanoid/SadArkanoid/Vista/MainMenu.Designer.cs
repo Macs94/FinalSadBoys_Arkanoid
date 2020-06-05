@@ -31,12 +31,103 @@ namespace SadArkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.TitleCard = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnHighScore = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize) (this.TitleCard)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // TitleCard
+            // 
+            this.TitleCard.BackColor = System.Drawing.Color.Transparent;
+            this.TitleCard.Image = global::SadArkanoid.Properties.Resources.ArkanoidTitle2;
+            this.TitleCard.Location = new System.Drawing.Point(284, 25);
+            this.TitleCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TitleCard.Name = "TitleCard";
+            this.TitleCard.Size = new System.Drawing.Size(554, 198);
+            this.TitleCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.TitleCard.TabIndex = 0;
+            this.TitleCard.TabStop = false;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnPlay.FlatAppearance.BorderSize = 2;
+            this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlay.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(433, 286);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(223, 98);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "1. Jugar";
+            this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPlay.UseVisualStyleBackColor = false;
+            // 
+            // btnHighScore
+            // 
+            this.btnHighScore.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnHighScore.FlatAppearance.BorderSize = 2;
+            this.btnHighScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnHighScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHighScore.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnHighScore.ForeColor = System.Drawing.Color.White;
+            this.btnHighScore.Location = new System.Drawing.Point(433, 399);
+            this.btnHighScore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHighScore.Name = "btnHighScore";
+            this.btnHighScore.Size = new System.Drawing.Size(223, 98);
+            this.btnHighScore.TabIndex = 2;
+            this.btnHighScore.Text = "2. Puntajes";
+            this.btnHighScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHighScore.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.btnExit.FlatAppearance.BorderSize = 2;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(433, 512);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(223, 98);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.Text = "3. Salir";
+            this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExit.UseVisualStyleBackColor = true;
+            // 
+            // MainMenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "MainMenu";
+            this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1128, 644);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnHighScore);
+            this.Controls.Add(this.btnPlay);
+            this.Controls.Add(this.TitleCard);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Name = "MainMenu";
+            this.Text = "Arkanoid-Main Menu";
+            ((System.ComponentModel.ISupportInitialize) (this.TitleCard)).EndInit();
+            this.ResumeLayout(false);
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox TitleCard;
+        private System.Windows.Forms.Button btnHighScore;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Button btnExit;
     }
 }

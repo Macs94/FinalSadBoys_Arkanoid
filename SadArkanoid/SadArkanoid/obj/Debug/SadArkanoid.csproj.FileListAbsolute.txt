@@ -6,3 +6,4 @@ C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\ob
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.csproj.GenerateResource.cache
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.exe
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.pdb
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.MainMenu.resources

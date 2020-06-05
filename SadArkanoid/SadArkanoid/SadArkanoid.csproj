@@ -63,6 +63,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Vista\MainMenu.resx">
+          <DependentUpon>MainMenu.cs</DependentUpon>
+        </EmbeddedResource>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
             <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,6 +82,11 @@
     <ItemGroup>
       <Folder Include="Controladores" />
       <Folder Include="Modelo" />
+    </ItemGroup>
+    <ItemGroup>
+      <Content Include="Resources\ArkanoidTItle.jpg" />
+      <Content Include="Resources\ArkanoidTitle2.jpg" />
+      <Content Include="Resources\BackgroundSad.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
