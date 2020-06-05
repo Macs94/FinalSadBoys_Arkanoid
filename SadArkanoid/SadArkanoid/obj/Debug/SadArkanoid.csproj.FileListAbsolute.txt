@@ -1,0 +1,8 @@
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\bin\Debug\SadArkanoid.exe.config
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\bin\Debug\SadArkanoid.exe
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\bin\Debug\SadArkanoid.pdb
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.Properties.Resources.resources
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.csproj.GenerateResource.cache
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.exe
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.pdb
