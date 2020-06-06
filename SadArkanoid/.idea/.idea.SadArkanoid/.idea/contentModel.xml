@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\juanhumberto\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\juanhumberto\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_SadArkanoid.-972376779.00" t="ExcludeRecursive" />
-    <e p="C:\Users\juanhumberto\Documents\UCA 2020\POO\FinalSadBoys_Arkanoid\SadArkanoid" t="IncludeFlat">
+    <e p="C:\Users\Mario\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mario\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_SadArkanoid.-1097392745.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SadArkanoid" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controladores" t="Include">
           <e p="ConnectionDB.cs" t="Include" />
+          <e p="UserDAO.cs" t="Include" />
         </e>
         <e p="Modelo" t="Include">
           <e p="CustomPictureBox.cs" t="Include" />
+          <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />
@@ -46,6 +48,9 @@
         </e>
         <e p="SadArkanoid.csproj" t="IncludeRecursive" />
         <e p="Vista" t="Include">
+          <e p="ChooseUser.cs" t="Include" />
+          <e p="ChooseUser.Designer.cs" t="Include" />
+          <e p="ChooseUser.resx" t="Include" />
           <e p="FormGame.cs" t="Include" />
           <e p="FormGame.Designer.cs" t="Include" />
           <e p="FormGame.resx" t="Include" />

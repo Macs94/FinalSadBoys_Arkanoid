@@ -19,7 +19,7 @@ namespace SadArkanoid
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-            FormGame ventana = new FormGame();
+            ChooseUser ventana = new ChooseUser();
             ventana.Owner = this;
             Hide();
             ventana.ShowDialog();
