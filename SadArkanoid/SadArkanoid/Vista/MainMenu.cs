@@ -27,7 +27,7 @@ namespace SadArkanoid
         }
         private void btnExit_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            Application.Exit();
         }
     }
 }
