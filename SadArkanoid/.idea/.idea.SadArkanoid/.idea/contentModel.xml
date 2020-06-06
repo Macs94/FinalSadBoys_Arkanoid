@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Mario\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Mario\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_SadArkanoid.-1097392745.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid" t="IncludeFlat">
+    <e p="C:\Users\juanhumberto\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\juanhumberto\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_SadArkanoid.-972376779.00" t="ExcludeRecursive" />
+    <e p="C:\Users\juanhumberto\Documents\UCA 2020\POO\FinalSadBoys_Arkanoid\SadArkanoid" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SadArkanoid" t="IncludeRecursive">
         <e p="App.config" t="Include" />
@@ -23,9 +23,27 @@
           <e p="ArkanoidTItle.jpg" t="Include" />
           <e p="ArkanoidTitle2.jpg" t="Include" />
           <e p="BackgroundSad.jpg" t="Include" />
+          <e p="Ball.png" t="Include" />
+          <e p="Heart.png" t="Include" />
+          <e p="Player.png" t="Include" />
+          <e p="Tile___black.png" t="Include" />
+          <e p="Tile___blinded.png" t="Include" />
+          <e p="Tile___blinded_broken.png" t="Include" />
+          <e p="Tile___blue.png" t="Include" />
+          <e p="Tile___green.png" t="Include" />
+          <e p="Tile___light_yellow.png" t="Include" />
+          <e p="Tile___lightblue.png" t="Include" />
+          <e p="Tile___mint.png" t="Include" />
+          <e p="Tile___pink.png" t="Include" />
+          <e p="Tile___red.png" t="Include" />
+          <e p="Tile___violet.png" t="Include" />
+          <e p="Tile___yellow.png" t="Include" />
         </e>
         <e p="SadArkanoid.csproj" t="IncludeRecursive" />
         <e p="Vista" t="Include">
+          <e p="FormGame.cs" t="Include" />
+          <e p="FormGame.Designer.cs" t="Include" />
+          <e p="FormGame.resx" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="MainMenu.Designer.cs" t="Include" />
           <e p="MainMenu.resx" t="Include" />

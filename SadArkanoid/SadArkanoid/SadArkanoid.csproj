@@ -48,6 +48,12 @@
     <ItemGroup>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
+        <Compile Include="Vista\FormGame.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Vista\FormGame.Designer.cs">
+          <DependentUpon>FormGame.cs</DependentUpon>
+        </Compile>
         <Compile Include="Vista\MainMenu.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -63,6 +69,9 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
+        <EmbeddedResource Include="Vista\FormGame.resx">
+          <DependentUpon>FormGame.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Vista\MainMenu.resx">
           <DependentUpon>MainMenu.cs</DependentUpon>
         </EmbeddedResource>
@@ -87,6 +96,21 @@
       <Content Include="Resources\ArkanoidTItle.jpg" />
       <Content Include="Resources\ArkanoidTitle2.jpg" />
       <Content Include="Resources\BackgroundSad.jpg" />
+      <Content Include="Resources\Ball.png" />
+      <Content Include="Resources\Heart.png" />
+      <Content Include="Resources\Player.png" />
+      <Content Include="Resources\Tile___black.png" />
+      <Content Include="Resources\Tile___blinded.png" />
+      <Content Include="Resources\Tile___blinded_broken.png" />
+      <Content Include="Resources\Tile___blue.png" />
+      <Content Include="Resources\Tile___green.png" />
+      <Content Include="Resources\Tile___lightblue.png" />
+      <Content Include="Resources\Tile___light_yellow.png" />
+      <Content Include="Resources\Tile___mint.png" />
+      <Content Include="Resources\Tile___pink.png" />
+      <Content Include="Resources\Tile___red.png" />
+      <Content Include="Resources\Tile___violet.png" />
+      <Content Include="Resources\Tile___yellow.png" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
