@@ -8,9 +8,12 @@
       <e p="SadArkanoid" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controladores" t="Include" />
+        <e p="Controladores" t="Include">
+          <e p="ConnectionDB.cs" t="Include" />
+        </e>
         <e p="Modelo" t="Include" />
         <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
