@@ -56,7 +56,7 @@ namespace SadArkanoid
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
             this.btnPlay.Location = new System.Drawing.Point(260, 199);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
@@ -74,12 +74,12 @@ namespace SadArkanoid
             this.btnHighScore.FlatAppearance.BorderSize = 0;
             this.btnHighScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnHighScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHighScore.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnHighScore.ForeColor = System.Drawing.Color.White;
             this.btnHighScore.Location = new System.Drawing.Point(260, 226);
             this.btnHighScore.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHighScore.Name = "btnHighScore";
-            this.btnHighScore.Size = new System.Drawing.Size(134, 31);
+            this.btnHighScore.Size = new System.Drawing.Size(134, 40);
             this.btnHighScore.TabIndex = 2;
             this.btnHighScore.Text = "2. Puntajes";
             this.btnHighScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,16 +91,17 @@ namespace SadArkanoid
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Cooper Black", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(260, 259);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(134, 26);
+            this.btnExit.Size = new System.Drawing.Size(134, 34);
             this.btnExit.TabIndex = 3;
             this.btnExit.Text = "3. Salir";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // MainMenu
             // 
@@ -113,6 +114,7 @@ namespace SadArkanoid
             this.Controls.Add(this.btnHighScore);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.TitleCard);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
