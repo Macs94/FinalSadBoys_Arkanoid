@@ -91,6 +91,7 @@
         <Compile Include="Controladores\ConnectionDB.cs" />
         <Compile Include="Controladores\UserDAO.cs" />
         <Compile Include="Modelo\CustomPictureBox.cs" />
+        <Compile Include="Modelo\GameData.cs" />
         <Compile Include="Modelo\User.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />

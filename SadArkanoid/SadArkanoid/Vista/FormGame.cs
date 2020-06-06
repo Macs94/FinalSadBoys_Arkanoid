@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Drawing;
-using System.Resources;
 using System.Windows.Forms;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
@@ -12,7 +10,7 @@ namespace SadArkanoid
         private bool goLeft;
         private bool goRight;
         private bool gameOver;
-
+        
         private int score;
         private int ballX;
         private int ballY;
@@ -33,7 +31,9 @@ namespace SadArkanoid
         
         private void FormGame_Load(object sender, EventArgs e)
         {
-            //WindowState = FormWindowState.Maximized;
+            if (GameData.fullScreen)
+                WindowState = FormWindowState.Maximized;
+            
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             gameSetUp();
