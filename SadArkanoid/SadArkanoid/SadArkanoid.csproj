@@ -89,6 +89,7 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Controladores\ConnectionDB.cs" />
+        <Compile Include="Modelo\CustomPictureBox.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Vista\FormGame.cs">
@@ -131,9 +132,6 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Modelo" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="Resources\ArkanoidTItle.jpg" />

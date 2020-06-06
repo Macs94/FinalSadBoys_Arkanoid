@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Drawing;
+using System.Resources;
 using System.Windows.Forms;
+using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
 
 namespace SadArkanoid
@@ -21,6 +23,8 @@ namespace SadArkanoid
 
         private Random rnd = new Random();
 
+        private CustomPictureBox[,] cpb;
+        
         public FormGame()
         {
             InitializeComponent();
@@ -29,6 +33,7 @@ namespace SadArkanoid
         
         private void FormGame_Load(object sender, EventArgs e)
         {
+            //WindowState = FormWindowState.Maximized;
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             gameSetUp();
@@ -57,20 +62,20 @@ namespace SadArkanoid
             time = 0;
             blockCount = 0;
 
-            foreach (Control staticObject in Controls)
-            {
-                if (staticObject is PictureBox && (string) staticObject.Tag == "blocks")
-                {
-                    staticObject.BackColor = Color.Gray;
-                    blockCount++;
-                }
+            txtTime.Top = 10;
+            txtTime.Left = Width / 2 - 100;
 
-                if (staticObject is PictureBox && (string) staticObject.Tag == "hp")
-                {
-                    staticObject.BackgroundImage = Resources.Heart;
-                    staticObject.BackgroundImageLayout = ImageLayout.Stretch;
-                } 
-            }
+            txtScore.Top = 10;
+            txtScore.Left = Width - txtScore.Width;
+            
+            loadTiles1();
+
+            heart1.BackgroundImage = Resources.Heart;
+            heart1.BackgroundImageLayout = ImageLayout.Stretch;
+            heart2.BackgroundImage = Resources.Heart; 
+            heart2.BackgroundImageLayout = ImageLayout.Stretch;
+            heart3.BackgroundImage = Resources.Heart; 
+            heart3.BackgroundImageLayout = ImageLayout.Stretch;
         }
         
         private void gameTimerEvent(object sender, EventArgs e)
@@ -125,14 +130,23 @@ namespace SadArkanoid
 
             foreach (Control block in Controls)
             {
-                if (block is PictureBox && (string) block.Tag == "blocks")
+                if (block is CustomPictureBox && block.Tag == "blocks")
                 {
-                    if (ball.Bounds.IntersectsWith(block.Bounds))
+                    var customBlock = (CustomPictureBox)block;
+                    if (ball.Bounds.IntersectsWith(customBlock.Bounds))
                     {
-                        score++;
-                        ballY = -ballY;
-                        Controls.Remove(block);
-                        blockCount--;
+                        if (customBlock.golpes == 2)
+                        {
+                            customBlock.golpes--;
+                            customBlock.BackgroundImage = Resources.Tile___blinded_broken;
+                        }
+                        else
+                        {
+                            score += customBlock.addedScore;
+                            ballY = -ballY;
+                            Controls.Remove(customBlock);
+                            blockCount--;
+                        }
                     }
                 }
             }
@@ -197,6 +211,62 @@ namespace SadArkanoid
         {
             time++;
             txtTime.Text = "TIME: " + time;
+        }
+
+        private void loadTiles1()
+        {
+            int xAxis = 13;
+            int yAxis = 6;
+
+            int pbHeight = (int) (Height * 0.2) / yAxis;
+            int pbWidth = (Width - xAxis) / xAxis;
+            
+            cpb = new CustomPictureBox[yAxis, xAxis];
+
+            for (int i = 0; i < yAxis; i++)
+            {
+                for (int j = 0; j < xAxis; j++)
+                {
+                    blockCount++;
+                    cpb[i, j] = new CustomPictureBox();
+                    cpb[i, j].Tag = "blocks";
+                    cpb[i, j].golpes = 1;
+                    cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
+                    cpb[i, j].Height = pbHeight;
+                    cpb[i, j].Width = pbWidth;
+                    cpb[i, j].Left = j * pbWidth;
+                    cpb[i, j].Top = i * pbHeight + 100;
+                    switch (i)
+                    {
+                        case 0:
+                            cpb[i, j].golpes = 2;
+                            cpb[i, j].BackgroundImage = Resources.Tile___blinded;
+                            cpb[i, j].addedScore = 50;
+                            break;
+                        case 1:
+                            cpb[i, j].BackgroundImage = Resources.Tile___red;
+                            cpb[i, j].addedScore = 90;
+                            break;
+                        case 2:
+                            cpb[i, j].BackgroundImage = Resources.Tile___yellow;
+                            cpb[i, j].addedScore = 120;
+                            break;
+                        case 3:
+                            cpb[i, j].BackgroundImage = Resources.Tile___blue;
+                            cpb[i, j].addedScore = 100;
+                            break;
+                        case 4:
+                            cpb[i, j].BackgroundImage = Resources.Tile___pink;
+                            cpb[i, j].addedScore = 110;
+                            break;
+                        case 5:
+                            cpb[i, j].BackgroundImage = Resources.Tile___green;
+                            cpb[i, j].addedScore = 80;
+                            break;
+                    }
+                    Controls.Add(cpb[i, j]);
+                }
+            }
         }
     }
 }
