@@ -18,7 +18,7 @@ namespace SadArkanoid
         private void btnComenzar_Click(object sender, EventArgs e)
         {
          
-            
+           
             try
             {
                 if (txtUsername.Text.Equals(""))
@@ -27,8 +27,10 @@ namespace SadArkanoid
                 }
                 else
                 {
-                    UserDAO.newUser(txtUsername.Text);
-                    FormGame ventana = new FormGame();
+                    User u = new User();
+                    u.username = txtUsername.Text;
+                    UserDAO.newUser(u.username);
+                    FormGame ventana = new FormGame(u);
                     ventana.Owner = this;
                     Hide();
                     ventana.ShowDialog();

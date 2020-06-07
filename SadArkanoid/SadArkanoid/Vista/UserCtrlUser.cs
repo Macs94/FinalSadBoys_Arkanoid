@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using SadArkanoid.Controladores;
+using SadArkanoid.Modelo;
 
 namespace SadArkanoid
 {
@@ -21,10 +22,11 @@ namespace SadArkanoid
                 }
                 else
                 {
-                    UserDAO.newUser(txtUsername.Text);
-                    FormGame ventana = new FormGame();
-                    ventana.Owner = ((FormInterface)Parent);
-                    Hide();
+                    User u = new User();
+                    u.username = txtUsername.Text;
+                    UserDAO.newUser(u.username);
+                    FormGame ventana = new FormGame(u);
+                    ((FormInterface)Parent).Hide();
                     ventana.ShowDialog();
                     ((FormInterface)Parent).Close();
                 }
