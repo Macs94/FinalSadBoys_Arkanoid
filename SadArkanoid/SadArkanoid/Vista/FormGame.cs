@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using System.Resources;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
@@ -11,7 +11,6 @@ namespace SadArkanoid
     {
         private bool goLeft;
         private bool goRight;
-        private bool gameOver;
 
         private int score;
         private int ballX;
@@ -25,6 +24,8 @@ namespace SadArkanoid
 
         private CustomPictureBox[,] cpb;
         
+        private PrivateFontCollection pfc = new PrivateFontCollection();
+        
         public FormGame()
         {
             InitializeComponent();
@@ -33,12 +34,18 @@ namespace SadArkanoid
         
         private void FormGame_Load(object sender, EventArgs e)
         {
-            //WindowState = FormWindowState.Maximized;
+            //GameData.fullScreen = true;
+            
+            pfc.AddFontFile("../../Resources/zorque.ttf");
+            
+            if (GameData.fullScreen)
+                WindowState = FormWindowState.Maximized;
+            
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             gameSetUp();
 
-            BackgroundImage = Resources.BackgroundSad;
+            BackgroundImage = Resources.back;
             BackgroundImageLayout = ImageLayout.Stretch;
 
             player.Image = Resources.Player;
@@ -50,25 +57,32 @@ namespace SadArkanoid
         
         private void gameSetUp()
         {
-            ballReset();
-            playerReset();
-            gameOver = false;
+            GameData.gameOver = false;
+            GameData.gameStart = false;
+            GameData.success = false;
+            
             hp = 3;
             score = 0;
-            ballX = 5;
-            ballY = -5;
             playerSpeed = 12;
-            txtScore.Text = "SCORE: " + score;
+            txtScore.Text = "SCORE: " + 0;
+            txtTime.Text = "TIME: " + 0;
             time = 0;
             blockCount = 0;
+            player.Top = Height - 80;
+            player.Left = Width / 2 - 50;
+
+            gameTimer.Interval = 20;
+            secondsTimer.Interval = 1000;
+            
+            ballReset();
 
             txtTime.Top = 10;
-            txtTime.Left = Width / 2 - 100;
+            txtTime.Left = Width / 2 - 80;
+            txtTime.Font = new Font(pfc.Families[0], 22);
 
             txtScore.Top = 10;
             txtScore.Left = Width - txtScore.Width;
-            
-            loadTiles1();
+            txtScore.Font = new Font(pfc.Families[0], 22);
 
             heart1.BackgroundImage = Resources.Heart;
             heart1.BackgroundImageLayout = ImageLayout.Stretch;
@@ -76,93 +90,126 @@ namespace SadArkanoid
             heart2.BackgroundImageLayout = ImageLayout.Stretch;
             heart3.BackgroundImage = Resources.Heart; 
             heart3.BackgroundImageLayout = ImageLayout.Stretch;
+
+            controlsInfo.BackgroundImage = Resources.Controls;
+            controlsInfo.BackgroundImageLayout = ImageLayout.Stretch;
+            controlsInfo.Height = (int) (Height * 0.3);
+            controlsInfo.Width = (int) (Width * 0.7);
+            controlsInfo.Top = (int) (Height * 0.45);
+            controlsInfo.Left = (int) (Width * 0.15);
+            
+            loadTiles1();
+            
+            gameTimer.Start();
         }
         
         private void gameTimerEvent(object sender, EventArgs e)
         {
-            txtScore.Text = "SCORE: " + score;
-
-            if (goLeft && player.Left > 0)
-                player.Left -= playerSpeed;
-            
-            if (goRight && player.Right < Width)
-                player.Left += playerSpeed;
-            
-            ball.Left += ballX;
-            ball.Top += ballY;
-
-            if (ball.Left < 0 || ball.Right > Width)
-                ballX = -ballX;
-
-            if (ball.Top < 0) 
-                ballY = -ballY;
-
-            if (ball.Top > Height)
+            if (GameData.gameStart)
             {
-                hp--;
-                switch (hp)
+                txtScore.Text = "SCORE: " + score;
+
+                if (goLeft && player.Left > 0)
+                    player.Left -= playerSpeed;
+                
+                if (goRight && player.Right < Width)
+                    player.Left += playerSpeed;
+                
+                ball.Left += ballX;
+                ball.Top += ballY;
+
+                if (ball.Left < 0 || ball.Right > Width)
+                    ballX = -ballX;
+
+                if (ball.Top < 0) 
+                    ballY = -ballY;
+
+                if (ball.Top > Height)
                 {
-                    case 2:
-                        Controls.Remove(heart3);
-                        break;
-                    case 1:
-                        Controls.Remove(heart2);
-                        break;
-                    case 0:
-                        Controls.Remove(heart1);
-                        gameOver = true;
-                        break;
-                }
-                gameTimer.Stop();
-                ballReset();
-                playerReset();
-            }
-
-            if (ball.Bounds.IntersectsWith(player.Bounds))
-            {
-                ballY = -rnd.Next(5, 12);
-
-                if (ballX < 0)
-                    ballX = -rnd.Next(5, 12);
-                else
-                    ballX = rnd.Next(5, 12);
-            }
-
-            foreach (Control block in Controls)
-            {
-                if (block is CustomPictureBox && block.Tag == "blocks")
-                {
-                    var customBlock = (CustomPictureBox)block;
-                    if (ball.Bounds.IntersectsWith(customBlock.Bounds))
+                    hp--;
+                    GameData.gameStart = false;
+                    switch (hp)
                     {
-                        if (customBlock.golpes == 2)
+                        case 2:
+                            heart3.Visible = false;
+                            break;
+                        case 1:
+                            heart2.Visible = false;
+                            break;
+                        case 0:
+                            heart1.Visible = false;
+                            GameData.gameOver = true;
+                            break;
+                    }
+                    
+                    ballReset();
+                }
+                
+                if (ball.Bounds.IntersectsWith(player.Bounds))
+                {
+                    ballY = -rnd.Next(5, 12);
+
+                    if (ballX < 0)
+                        ballX = -rnd.Next(5, 12);
+                    else
+                        ballX = rnd.Next(5, 12);
+                }
+
+                foreach (Control block in Controls)
+                {
+                    if (block is CustomPictureBox && block.Tag == "blocks")
+                    {
+                        var customBlock = (CustomPictureBox) block;
+                        if (ball.Bounds.IntersectsWith(customBlock.Bounds))
                         {
-                            customBlock.golpes--;
-                            customBlock.BackgroundImage = Resources.Tile___blinded_broken;
-                        }
-                        else
-                        {
-                            score += customBlock.addedScore;
-                            ballY = -ballY;
-                            Controls.Remove(customBlock);
-                            blockCount--;
+                            if (customBlock.golpes == 2)
+                            {
+                                ballY = -ballY;
+                                customBlock.golpes--;
+                                customBlock.BackgroundImage = Resources.Tile_silver_damaged;
+                            }
+                            else 
+                            {
+                                ballY = -ballY;
+                                score += customBlock.addedScore;
+                                Controls.Remove(customBlock);
+                                blockCount--;
+                            }
                         }
                     }
                 }
-            }
 
-            if (blockCount == 0)
-                gameOver = true;
-            
-            gameIsOver();
+                if (blockCount == 0)
+                {
+                    GameData.gameOver = true;
+                    GameData.success = true;
+                }
+
+                gameIsOver();
+            }
+            else
+            {
+                if (goLeft && player.Left > 0)
+                {
+                    player.Left -= playerSpeed;
+                    ball.Left -= playerSpeed;
+                }
+
+                if (goRight && player.Right < Width)
+                {
+                    player.Left += playerSpeed;
+                    ball.Left += playerSpeed;
+                }
+            }
         }
         
         private void keyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Space)
             {
-                gameTimer.Start();
+                GameData.gameStart = true;
                 secondsTimer.Start();
+                controlsInfo.Visible = false;
             }
 
             if (e.KeyCode == Keys.Left)
@@ -170,7 +217,15 @@ namespace SadArkanoid
 
             if (e.KeyCode == Keys.Right)
                 goRight = true;
-            
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                MainMenu ventana = new MainMenu();
+                ventana.Owner = this;
+                Hide();
+                ventana.ShowDialog();
+                Close();
+            }
         }
 
         private void keyUp(object sender, KeyEventArgs e)
@@ -184,22 +239,15 @@ namespace SadArkanoid
 
         private void ballReset()
         {
-            ball.Top = Height - 100;
-            ball.Left = Width / 2;
+            ball.Top = player.Top - 25;
+            ball.Left = player.Left + 45;
             ballX = 5;
             ballY = -5;
         }
-
-        private void playerReset()
-        {
-            player.Top = Height - 70;
-            player.Left = Width / 2 - 50;
-            playerSpeed = 12;
-        }
-
+        
         private void gameIsOver()
         {
-            if (gameOver)
+            if (GameData.gameOver)
             {
                 gameTimer.Stop();
                 secondsTimer.Stop();
@@ -240,27 +288,27 @@ namespace SadArkanoid
                     {
                         case 0:
                             cpb[i, j].golpes = 2;
-                            cpb[i, j].BackgroundImage = Resources.Tile___blinded;
+                            cpb[i, j].BackgroundImage = Resources.Tile_silver;
                             cpb[i, j].addedScore = 50;
                             break;
                         case 1:
-                            cpb[i, j].BackgroundImage = Resources.Tile___red;
+                            cpb[i, j].BackgroundImage = Resources.Tile_red;
                             cpb[i, j].addedScore = 90;
                             break;
                         case 2:
-                            cpb[i, j].BackgroundImage = Resources.Tile___yellow;
+                            cpb[i, j].BackgroundImage = Resources.Tile_yellow1;
                             cpb[i, j].addedScore = 120;
                             break;
                         case 3:
-                            cpb[i, j].BackgroundImage = Resources.Tile___blue;
+                            cpb[i, j].BackgroundImage = Resources.Tile_blue;
                             cpb[i, j].addedScore = 100;
                             break;
                         case 4:
-                            cpb[i, j].BackgroundImage = Resources.Tile___pink;
+                            cpb[i, j].BackgroundImage = Resources.Tile_violet;
                             cpb[i, j].addedScore = 110;
                             break;
                         case 5:
-                            cpb[i, j].BackgroundImage = Resources.Tile___green;
+                            cpb[i, j].BackgroundImage = Resources.Tile_green;
                             cpb[i, j].addedScore = 80;
                             break;
                     }

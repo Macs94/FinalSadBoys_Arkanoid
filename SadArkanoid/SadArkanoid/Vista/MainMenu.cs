@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
 
 namespace SadArkanoid
@@ -19,6 +20,11 @@ namespace SadArkanoid
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+            if (checkFullscreen.Checked)
+                GameData.fullScreen = true;
+            else
+                GameData.fullScreen = false;
+            
             ChooseUser ventana = new ChooseUser();
             ventana.Owner = this;
             Hide();

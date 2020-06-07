@@ -99,3 +99,4 @@ C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\ob
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.FormGame.resources
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.csproj.CopyComplete
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.ChooseUser.resources
+C:\Users\juanhumberto\Documents\UCA 2020\POO\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.ChooseUser.resources

@@ -83,9 +83,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BackgroundSad {
+        internal static System.Drawing.Bitmap back {
             get {
-                object obj = ResourceManager.GetObject("BackgroundSad", resourceCulture);
+                object obj = ResourceManager.GetObject("back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +96,16 @@ namespace SadArkanoid.Properties {
         internal static System.Drawing.Bitmap Ball {
             get {
                 object obj = ResourceManager.GetObject("Ball", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Controls {
+            get {
+                object obj = ResourceManager.GetObject("Controls", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +133,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___black {
+        internal static System.Drawing.Bitmap Tile_blue {
             get {
-                object obj = ResourceManager.GetObject("Tile___black", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +143,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___blinded {
+        internal static System.Drawing.Bitmap Tile_green {
             get {
-                object obj = ResourceManager.GetObject("Tile___blinded", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_green", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +153,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___blinded_broken {
+        internal static System.Drawing.Bitmap Tile_red {
             get {
-                object obj = ResourceManager.GetObject("Tile___blinded_broken", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +163,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___blue {
+        internal static System.Drawing.Bitmap Tile_silver {
             get {
-                object obj = ResourceManager.GetObject("Tile___blue", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_silver", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +173,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___green {
+        internal static System.Drawing.Bitmap Tile_silver_damaged {
             get {
-                object obj = ResourceManager.GetObject("Tile___green", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_silver_damaged", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +183,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___light_yellow {
+        internal static System.Drawing.Bitmap Tile_violet {
             get {
-                object obj = ResourceManager.GetObject("Tile___light_yellow", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_violet", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,59 +193,9 @@ namespace SadArkanoid.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Tile___lightblue {
+        internal static System.Drawing.Bitmap Tile_yellow1 {
             get {
-                object obj = ResourceManager.GetObject("Tile___lightblue", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tile___mint {
-            get {
-                object obj = ResourceManager.GetObject("Tile___mint", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tile___pink {
-            get {
-                object obj = ResourceManager.GetObject("Tile___pink", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tile___red {
-            get {
-                object obj = ResourceManager.GetObject("Tile___red", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tile___violet {
-            get {
-                object obj = ResourceManager.GetObject("Tile___violet", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Tile___yellow {
-            get {
-                object obj = ResourceManager.GetObject("Tile___yellow", resourceCulture);
+                object obj = ResourceManager.GetObject("Tile_yellow1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
