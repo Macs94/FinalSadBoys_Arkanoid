@@ -68,6 +68,7 @@ namespace SadArkanoid
             this.heart3 = new System.Windows.Forms.PictureBox();
             this.txtScore = new System.Windows.Forms.Label();
             this.secondsTimer = new System.Windows.Forms.Timer(this.components);
+            this.controlsInfo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize) (this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.ball)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.pictureBox3)).BeginInit();
@@ -100,6 +101,7 @@ namespace SadArkanoid
             ((System.ComponentModel.ISupportInitialize) (this.heart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.controlsInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // player
@@ -395,11 +397,11 @@ namespace SadArkanoid
             // txtTime
             // 
             this.txtTime.BackColor = System.Drawing.Color.Transparent;
-            this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtTime.ForeColor = System.Drawing.Color.White;
-            this.txtTime.Location = new System.Drawing.Point(179, 9);
+            this.txtTime.Location = new System.Drawing.Point(223, 10);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(248, 33);
+            this.txtTime.Size = new System.Drawing.Size(199, 33);
             this.txtTime.TabIndex = 0;
             this.txtTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -411,9 +413,9 @@ namespace SadArkanoid
             // heart1
             // 
             this.heart1.BackColor = System.Drawing.Color.Transparent;
-            this.heart1.Location = new System.Drawing.Point(12, 10);
+            this.heart1.Location = new System.Drawing.Point(3, 10);
             this.heart1.Name = "heart1";
-            this.heart1.Size = new System.Drawing.Size(25, 24);
+            this.heart1.Size = new System.Drawing.Size(34, 32);
             this.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart1.TabIndex = 2;
             this.heart1.TabStop = false;
@@ -424,7 +426,7 @@ namespace SadArkanoid
             this.heart2.BackColor = System.Drawing.Color.Transparent;
             this.heart2.Location = new System.Drawing.Point(43, 10);
             this.heart2.Name = "heart2";
-            this.heart2.Size = new System.Drawing.Size(25, 24);
+            this.heart2.Size = new System.Drawing.Size(34, 32);
             this.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart2.TabIndex = 2;
             this.heart2.TabStop = false;
@@ -433,9 +435,9 @@ namespace SadArkanoid
             // heart3
             // 
             this.heart3.BackColor = System.Drawing.Color.Transparent;
-            this.heart3.Location = new System.Drawing.Point(74, 10);
+            this.heart3.Location = new System.Drawing.Point(83, 10);
             this.heart3.Name = "heart3";
-            this.heart3.Size = new System.Drawing.Size(25, 24);
+            this.heart3.Size = new System.Drawing.Size(34, 32);
             this.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart3.TabIndex = 2;
             this.heart3.TabStop = false;
@@ -446,7 +448,7 @@ namespace SadArkanoid
             this.txtScore.BackColor = System.Drawing.Color.Transparent;
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(433, 9);
+            this.txtScore.Location = new System.Drawing.Point(462, 10);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(225, 33);
             this.txtScore.TabIndex = 0;
@@ -457,6 +459,15 @@ namespace SadArkanoid
             this.secondsTimer.Interval = 1000;
             this.secondsTimer.Tick += new System.EventHandler(this.secondsTimerEvent);
             // 
+            // controlsInfo
+            // 
+            this.controlsInfo.BackColor = System.Drawing.Color.Transparent;
+            this.controlsInfo.Location = new System.Drawing.Point(99, 171);
+            this.controlsInfo.Name = "controlsInfo";
+            this.controlsInfo.Size = new System.Drawing.Size(475, 195);
+            this.controlsInfo.TabIndex = 3;
+            this.controlsInfo.TabStop = false;
+            // 
             // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -464,6 +475,7 @@ namespace SadArkanoid
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(694, 471);
+            this.Controls.Add(this.controlsInfo);
             this.Controls.Add(this.heart3);
             this.Controls.Add(this.heart2);
             this.Controls.Add(this.heart1);
@@ -537,10 +549,12 @@ namespace SadArkanoid
             ((System.ComponentModel.ISupportInitialize) (this.heart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize) (this.heart3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.controlsInfo)).EndInit();
             this.ResumeLayout(false);
         }
 
         private System.Windows.Forms.PictureBox ball;
+        private System.Windows.Forms.PictureBox controlsInfo;
         private System.Windows.Forms.Timer gameTimer;
         private System.Windows.Forms.PictureBox heart1;
         private System.Windows.Forms.PictureBox heart2;
