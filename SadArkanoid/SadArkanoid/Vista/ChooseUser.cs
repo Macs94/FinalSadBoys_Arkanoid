@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using SadArkanoid.Controladores;
+using SadArkanoid.Modelo;
 
 namespace SadArkanoid
 {
@@ -14,11 +17,21 @@ namespace SadArkanoid
 
         private void btnComenzar_Click(object sender, EventArgs e)
         {
+         
+            
             try
             {
                 if (txtUsername.Text.Equals(""))
                 {
                     MessageBox.Show("No se puede dejar campos vacios", "SadBoysArkanoid");
+                }
+                else if (UserDAO.checkUserName(txtUsername.Text))
+                {
+                    FormGame ventana = new FormGame();
+                    ventana.Owner = this;
+                    Hide();
+                    ventana.ShowDialog();
+                    Close();
                 }
                 else
                 {
@@ -32,7 +45,7 @@ namespace SadArkanoid
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error o ya existe el jugador");
+                MessageBox.Show("Ha ocurrido un error");
             }
 
 
