@@ -7,7 +7,6 @@ namespace SadArkanoid.Modelo
         public static bool fullScreen { get; set; }
         public static bool gameStart { get; set; }
         public static bool gameOver { get; set; }
-
         public static bool success { get; set; }
     }
 }
