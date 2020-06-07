@@ -25,10 +25,13 @@ namespace SadArkanoid
         private CustomPictureBox[,] cpb;
         
         private PrivateFontCollection pfc = new PrivateFontCollection();
+
+        private User playahata;
         
-        public FormGame()
+        public FormGame(User supremePlayaHata)
         {
             InitializeComponent();
+            playahata = supremePlayaHata;
             DoubleBuffered = true;
         }
         
@@ -44,6 +47,11 @@ namespace SadArkanoid
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             gameSetUp();
+
+            lblPlayer.Text = playahata.username;
+            lblPlayer.Font = new Font(pfc.Families[0],12);
+            lblPlayer.ForeColor = Color.White;
+            lblPlayer.BackColor = Color.Transparent;
 
             BackgroundImage = Resources.back;
             BackgroundImageLayout = ImageLayout.Stretch;
