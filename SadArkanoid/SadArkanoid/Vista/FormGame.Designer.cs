@@ -448,9 +448,9 @@ namespace SadArkanoid
             this.txtScore.BackColor = System.Drawing.Color.Transparent;
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(462, 10);
+            this.txtScore.Location = new System.Drawing.Point(428, 10);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(225, 33);
+            this.txtScore.Size = new System.Drawing.Size(259, 33);
             this.txtScore.TabIndex = 0;
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 

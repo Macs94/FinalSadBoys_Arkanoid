@@ -34,7 +34,7 @@ namespace SadArkanoid
         
         private void FormGame_Load(object sender, EventArgs e)
         {
-            GameData.fullScreen = true;
+            //GameData.fullScreen = true;
             
             pfc.AddFontFile("../../Resources/zorque.ttf");
             
@@ -78,11 +78,11 @@ namespace SadArkanoid
 
             txtTime.Top = 10;
             txtTime.Left = Width / 2 - 80;
-            txtTime.Font = new Font(pfc.Families[0], 24);
+            txtTime.Font = new Font(pfc.Families[0], 22);
 
             txtScore.Top = 10;
             txtScore.Left = Width - txtScore.Width;
-            txtScore.Font = new Font(pfc.Families[0], 24);
+            txtScore.Font = new Font(pfc.Families[0], 22);
 
             heart1.BackgroundImage = Resources.Heart;
             heart1.BackgroundImageLayout = ImageLayout.Stretch;
