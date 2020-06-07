@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
+using SadArkanoid.Controladores;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
 
@@ -259,6 +260,8 @@ namespace SadArkanoid
             {
                 gameTimer.Stop();
                 secondsTimer.Stop();
+                //playahata.score = score;
+                //UserDAO.updateScore(playahata.username,playahata.score);
                 MessageBox.Show("GAME OVER");
             }
         }
