@@ -25,14 +25,6 @@ namespace SadArkanoid
                 {
                     MessageBox.Show("No se puede dejar campos vacios", "SadBoysArkanoid");
                 }
-                else if (UserDAO.checkUserName(txtUsername.Text))
-                {
-                    FormGame ventana = new FormGame();
-                    ventana.Owner = this;
-                    Hide();
-                    ventana.ShowDialog();
-                    Close();
-                }
                 else
                 {
                     UserDAO.newUser(txtUsername.Text);

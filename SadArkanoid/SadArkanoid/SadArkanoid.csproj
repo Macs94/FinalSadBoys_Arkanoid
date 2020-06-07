@@ -107,6 +107,12 @@
         <Compile Include="Vista\FormGame.Designer.cs">
           <DependentUpon>FormGame.cs</DependentUpon>
         </Compile>
+        <Compile Include="Vista\HighScores.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="Vista\HighScores.Designer.cs">
+          <DependentUpon>HighScores.cs</DependentUpon>
+        </Compile>
         <Compile Include="Vista\MainMenu.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -127,6 +133,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Vista\FormGame.resx">
           <DependentUpon>FormGame.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Vista\HighScores.resx">
+          <DependentUpon>HighScores.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Vista\MainMenu.resx">
           <DependentUpon>MainMenu.cs</DependentUpon>

@@ -35,5 +35,14 @@ namespace SadArkanoid
         {
             Application.Exit();
         }
+
+        private void btnHighScore_Click(object sender, EventArgs e)
+        {
+            HighScores ventana = new HighScores();
+            ventana.Owner = this;
+            Hide();
+            ventana.ShowDialog();
+            Close();
+        }
     }
 }
