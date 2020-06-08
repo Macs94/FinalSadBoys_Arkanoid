@@ -67,5 +67,6 @@ namespace SadArkanoid.Controladores
       
             return value;
         }
+
     }
 }

@@ -13,37 +13,68 @@ namespace SadArkanoid
         {
             InitializeComponent();
         }
-
+        private void ChooseUser_Load(object sender, EventArgs e)
+        {
+            //btnComenzar.Enabled = false;
+        }
 
         private void btnComenzar_Click(object sender, EventArgs e)
         {
-         
-           
             try
             {
                 if (txtUsername.Text.Equals(""))
                 {
-                    MessageBox.Show("No se puede dejar campos vacios", "SadBoysArkanoid");
+                    lblLogin.Text = "No se permimten campos vacios";
                 }
-                else
+                else if (UserDAO.checkUserName(txtUsername.Text) != "")
                 {
                     User u = new User();
                     u.username = txtUsername.Text;
-                    UserDAO.newUser(u.username);
                     FormGame ventana = new FormGame(u);
                     ventana.Owner = this;
                     Hide();
                     ventana.ShowDialog();
                     Close();
                 }
+                else
+                {
+                    lblLogin.Text = "El usuario no existe, primero registrelo";
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un error");
             }
-
-
+            
         }
+        
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+           
+            try
+            {
+                if (txtUsername.Text.Equals(""))
+                {
+                    lblLogin.Text = "No se permimten campos vacios";
+                }
+                else if (UserDAO.checkUserName(txtUsername.Text) != "")
+                {
+                    lblLogin.Text = "El usuario ya existe";
+                }
+                else
+                {
+                    User u = new User();
+                    u.username = txtUsername.Text;
+                    UserDAO.newUser(u.username); 
+                    txtUsername.Clear();
+                    lblLogin.Text = "El usuario registrado";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un error");
+            }
+        } 
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
@@ -53,5 +84,11 @@ namespace SadArkanoid
             ventana.ShowDialog();
             Close();
         }
+
+
+       
+ 
+
+       
     }
 }
