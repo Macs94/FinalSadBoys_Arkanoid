@@ -41,8 +41,9 @@ namespace SadArkanoid
             // 
             // checkFullscreen
             // 
+            this.checkFullscreen.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkFullscreen.ForeColor = System.Drawing.Color.White;
-            this.checkFullscreen.Location = new System.Drawing.Point(382, 256);
+            this.checkFullscreen.Location = new System.Drawing.Point(394, 320);
             this.checkFullscreen.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkFullscreen.Name = "checkFullscreen";
             this.checkFullscreen.Size = new System.Drawing.Size(134, 46);
@@ -56,14 +57,14 @@ namespace SadArkanoid
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnExit.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(158, 339);
+            this.btnExit.Location = new System.Drawing.Point(109, 352);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(134, 32);
+            this.btnExit.Size = new System.Drawing.Size(226, 57);
             this.btnExit.TabIndex = 8;
-            this.btnExit.Text = "3. Exit";
+            this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
@@ -74,14 +75,14 @@ namespace SadArkanoid
             this.btnHighScore.FlatAppearance.BorderSize = 0;
             this.btnHighScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnHighScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnHighScore.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnHighScore.ForeColor = System.Drawing.Color.White;
-            this.btnHighScore.Location = new System.Drawing.Point(158, 303);
+            this.btnHighScore.Location = new System.Drawing.Point(109, 293);
             this.btnHighScore.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHighScore.Name = "btnHighScore";
-            this.btnHighScore.Size = new System.Drawing.Size(134, 34);
+            this.btnHighScore.Size = new System.Drawing.Size(226, 57);
             this.btnHighScore.TabIndex = 7;
-            this.btnHighScore.Text = "2. High Scores";
+            this.btnHighScore.Text = "High Scores";
             this.btnHighScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHighScore.UseVisualStyleBackColor = true;
             this.btnHighScore.Click += new System.EventHandler(this.btnHighScore_Click);
@@ -93,14 +94,14 @@ namespace SadArkanoid
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPlay.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(158, 256);
+            this.btnPlay.Location = new System.Drawing.Point(109, 234);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(134, 45);
+            this.btnPlay.Size = new System.Drawing.Size(226, 57);
             this.btnPlay.TabIndex = 6;
-            this.btnPlay.Text = "1. Play";
+            this.btnPlay.Text = "Play";
             this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click_1);
@@ -108,10 +109,10 @@ namespace SadArkanoid
             // TitleCard
             // 
             this.TitleCard.BackColor = System.Drawing.Color.Transparent;
-            this.TitleCard.Location = new System.Drawing.Point(68, 90);
+            this.TitleCard.Location = new System.Drawing.Point(77, 58);
             this.TitleCard.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TitleCard.Name = "TitleCard";
-            this.TitleCard.Size = new System.Drawing.Size(332, 103);
+            this.TitleCard.Size = new System.Drawing.Size(451, 129);
             this.TitleCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TitleCard.TabIndex = 5;
             this.TitleCard.TabStop = false;
@@ -127,7 +128,7 @@ namespace SadArkanoid
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.TitleCard);
             this.Name = "UserCtrlMainMenu";
-            this.Size = new System.Drawing.Size(584, 461);
+            this.Size = new System.Drawing.Size(600, 500);
             this.Load += new System.EventHandler(this.UserCtrlMainMenu_Load);
             ((System.ComponentModel.ISupportInitialize) (this.TitleCard)).EndInit();
             this.ResumeLayout(false);

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
@@ -7,17 +8,19 @@ namespace SadArkanoid
 {
     public partial class UserCtrlMainMenu : UserControl
     {
+        PrivateFontCollection pfc = new PrivateFontCollection();
+        
         public UserCtrlMainMenu()
         {
             InitializeComponent();
         }
-        
+
         private void UserCtrlMainMenu_Load(object sender, EventArgs e)
         {
             TitleCard.BackgroundImage = Resources.ArkanoidTitle2;
             TitleCard.BackgroundImageLayout = ImageLayout.Stretch;
         }
-        
+
         private void btnPlay_Click_1(object sender, EventArgs e)
         {
             if (checkFullscreen.Checked)

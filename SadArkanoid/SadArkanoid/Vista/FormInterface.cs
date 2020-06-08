@@ -6,13 +6,13 @@ namespace SadArkanoid
     public partial class FormInterface : Form
     {
         private UserControl current = null;
-        
+
         public FormInterface()
         {
             InitializeComponent();
             current = userCtrlMainMenu1;
         }
-        
+
         public void ChangeControl(UserControl newControl) 
         {
             try

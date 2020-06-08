@@ -2,7 +2,6 @@
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
-using SadArkanoid.Controladores;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
 
@@ -38,10 +37,7 @@ namespace SadArkanoid
         
         private void FormGame_Load(object sender, EventArgs e)
         {
-            // GameData.fullScreen = true;
-            GameData.gameStart = false;
-            GameData.gameOver = false;
-            GameData.victory = false;
+            GameData.softReset();
             
             pfc.AddFontFile("../../Resources/zorque.ttf");
             
@@ -235,11 +231,13 @@ namespace SadArkanoid
 
             if (e.KeyCode == Keys.Escape)
             {
-                FormInterface ventana = new FormInterface();
-                ventana.Owner = this;
-                Hide();
-                ventana.ShowDialog();
-                Close();
+                gameTimer.Stop();
+                secondsTimer.Stop();
+
+                this.Hide();
+                var form2 = new FormInterface();
+                form2.Closed += (s, args) => this.Close(); 
+                form2.Show();
             }
         }
 

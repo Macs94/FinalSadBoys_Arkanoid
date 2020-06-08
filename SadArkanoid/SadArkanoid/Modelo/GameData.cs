@@ -8,5 +8,12 @@ namespace SadArkanoid.Modelo
         public static bool gameStart { get; set; }
         public static bool gameOver { get; set; }
         public static bool victory { get; set; }
+
+        public static void softReset()
+        {
+            gameStart = false;
+            gameOver = false;
+            victory = false;
+        }
     }
 }
