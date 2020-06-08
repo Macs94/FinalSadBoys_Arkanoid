@@ -39,6 +39,9 @@ namespace SadArkanoid
         private void FormGame_Load(object sender, EventArgs e)
         {
             // GameData.fullScreen = true;
+            GameData.gameStart = false;
+            GameData.gameOver = false;
+            GameData.victory = false;
             
             pfc.AddFontFile("../../Resources/zorque.ttf");
             
@@ -48,6 +51,9 @@ namespace SadArkanoid
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             gameSetUp();
+            
+            gameTimer.Interval = 20;
+            secondsTimer.Interval = 1000;
 
             lblPlayer.Text = playahata.username;
             lblPlayer.Font = new Font(pfc.Families[0],12);
@@ -66,10 +72,6 @@ namespace SadArkanoid
         
         private void gameSetUp()
         {
-            GameData.gameOver = false;
-            GameData.gameStart = false;
-            GameData.victory = false;
-            
             hp = 3;
             score = 0;
             playerSpeed = 12;
@@ -80,9 +82,6 @@ namespace SadArkanoid
             player.Top = Height - 70;
             player.Left = Width / 2 - 50;
 
-            gameTimer.Interval = 20;
-            secondsTimer.Interval = 1000;
-            
             ballReset();
 
             txtTime.Top = 10;
@@ -214,14 +213,14 @@ namespace SadArkanoid
         
         private void keyDown(object sender, KeyEventArgs e)
         {
-            if (!GameData.gameStart && e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Space && !GameData.gameStart && !GameData.gameOver)
             {
                 GameData.gameStart = true;
                 secondsTimer.Start();
                 controlsInfo.Visible = false;
             }
 
-            if (GameData.gameOver && e.KeyCode == Keys.Space)
+            if (e.KeyCode == Keys.Enter && GameData.gameOver)
             {
                 Controls.Clear();
                 InitializeComponent();
@@ -265,7 +264,7 @@ namespace SadArkanoid
         {
             if (GameData.gameOver)
             {
-                secondsTimer.Stop();
+                GameData.gameStart = false;
                 //playahata.score = score;
                 //UserDAO.updateScore(playahata.username,playahata.score);
                 if (GameData.victory)
@@ -276,6 +275,8 @@ namespace SadArkanoid
                 {
                     
                 }
+                secondsTimer.Stop();
+                gameTimer.Stop();
             }
         }
         

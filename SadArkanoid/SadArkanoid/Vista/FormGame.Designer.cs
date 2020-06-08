@@ -518,7 +518,7 @@ namespace SadArkanoid
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(694, 395);
+            this.ClientSize = new System.Drawing.Size(694, 521);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.controlsInfo);
             this.Controls.Add(this.heart3);
