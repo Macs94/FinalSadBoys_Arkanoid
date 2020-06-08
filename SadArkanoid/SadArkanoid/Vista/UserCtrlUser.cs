@@ -24,8 +24,8 @@ namespace SadArkanoid
                 {
                     User u = new User();
                     u.username = txtUsername.Text;
-                    if (!UserDAO.checkUserNameExists(u.username))
-                        UserDAO.newUser(u.username);
+                   // if (!UserDAO.checkUserNameExists(u.username))
+                     //   UserDAO.newUser(u.username);
                     FormGame ventana = new FormGame(u);
                     ((FormInterface)Parent).Hide();
                     ventana.ShowDialog();

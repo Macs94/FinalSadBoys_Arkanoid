@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using System;
 using Npgsql;
+using NpgsqlTypes;
 using SadArkanoid.Modelo;
 
 namespace SadArkanoid.Controladores
@@ -43,14 +44,28 @@ namespace SadArkanoid.Controladores
             connection.Close();
         }
 
-        public static bool ExecuteCheckQuery(string act)
+        public static string ExecuteCheckUser(string sql)
         {
-            NpgsqlConnection connection = new NpgsqlConnection(sConnection);
-            connection.Open();
-            NpgsqlCommand command = new NpgsqlCommand(act, connection);
-            var n = command.ExecuteScalar();
-            return (bool) n;
+            string value = "";
+            NpgsqlConnection conn = new NpgsqlConnection(sConnection);
+
+            try
+            {
+                NpgsqlCommand nc = new NpgsqlCommand(sql, conn);
+                conn.Open();
+                nc.Parameters.AddWithValue(NpgsqlDbType.Text, sql);
+                value = nc.ExecuteScalar().ToString();
+            }
+            catch (Exception e)
+            {
+                
+            }
+            finally
+            {
+                conn.Close();
+            }
+      
+            return value;
         }
     }
-    
 }
