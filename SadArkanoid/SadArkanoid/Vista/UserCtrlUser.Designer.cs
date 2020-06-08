@@ -34,19 +34,18 @@ namespace SadArkanoid
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnReturn = new System.Windows.Forms.Button();
             this.btnComenzar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Maroon;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(134, 240);
+            this.txtUsername.Location = new System.Drawing.Point(115, 208);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(383, 38);
+            this.txtUsername.Size = new System.Drawing.Size(329, 38);
             this.txtUsername.TabIndex = 7;
             // 
             // btnReturn
@@ -54,13 +53,12 @@ namespace SadArkanoid
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(65, 312);
+            this.btnReturn.Location = new System.Drawing.Point(56, 270);
             this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(181, 89);
+            this.btnReturn.Size = new System.Drawing.Size(155, 77);
             this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Back to Menu";
             this.btnReturn.UseVisualStyleBackColor = true;
@@ -71,49 +69,48 @@ namespace SadArkanoid
             this.btnComenzar.FlatAppearance.BorderSize = 0;
             this.btnComenzar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnComenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnComenzar.ForeColor = System.Drawing.Color.White;
-            this.btnComenzar.Location = new System.Drawing.Point(412, 312);
+            this.btnComenzar.Location = new System.Drawing.Point(353, 270);
             this.btnComenzar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnComenzar.Name = "btnComenzar";
-            this.btnComenzar.Size = new System.Drawing.Size(204, 89);
+            this.btnComenzar.Size = new System.Drawing.Size(175, 77);
             this.btnComenzar.TabIndex = 5;
             this.btnComenzar.Text = "Begin Arkanoid";
             this.btnComenzar.UseVisualStyleBackColor = true;
             this.btnComenzar.Click += new System.EventHandler(this.btnComenzar_Click_1);
             // 
-            // label1
+            // txtUser
             // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular,
-                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(134, 130);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 77);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Username";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.txtUser.ForeColor = System.Drawing.Color.White;
+            this.txtUser.Location = new System.Drawing.Point(115, 113);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(328, 67);
+            this.txtUser.TabIndex = 4;
+            this.txtUser.Text = "Username";
+            this.txtUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UserCtrlUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnComenzar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtUser);
             this.Name = "UserCtrlUser";
-            this.Size = new System.Drawing.Size(681, 532);
+            this.Size = new System.Drawing.Size(584, 461);
+            this.Load += new System.EventHandler(this.UserCtrlUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
         private System.Windows.Forms.Button btnComenzar;
         private System.Windows.Forms.Button btnReturn;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtUser;
         private System.Windows.Forms.TextBox txtUsername;
 
         #endregion

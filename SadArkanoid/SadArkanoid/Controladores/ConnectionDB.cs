@@ -67,6 +67,15 @@ namespace SadArkanoid.Controladores
       
             return value;
         }
+        
+        public static bool ExecuteCheckQuery(string act)
+        {
+            NpgsqlConnection connection = new NpgsqlConnection(sConnection);
+            connection.Open();
+            NpgsqlCommand command = new NpgsqlCommand(act, connection);
+            var n = command.ExecuteScalar();
+            return (bool) n;
+        }
 
     }
 }

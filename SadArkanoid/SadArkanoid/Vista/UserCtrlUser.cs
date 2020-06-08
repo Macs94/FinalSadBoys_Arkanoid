@@ -12,6 +12,11 @@ namespace SadArkanoid
             InitializeComponent();
         }
         
+        private void UserCtrlUser_Load(object sender, EventArgs e)
+        {
+            txtUsername.Focus();
+        }
+        
         private void btnComenzar_Click_1(object sender, EventArgs e)
         {
             try
@@ -24,8 +29,8 @@ namespace SadArkanoid
                 {
                     User u = new User();
                     u.username = txtUsername.Text;
-                   // if (!UserDAO.checkUserNameExists(u.username))
-                     //   UserDAO.newUser(u.username);
+                    if (!UserDAO.checkUserNameExists(u.username))
+                        UserDAO.newUser(u.username);
                     FormGame ventana = new FormGame(u);
                     ((FormInterface)Parent).Hide();
                     ventana.ShowDialog();
