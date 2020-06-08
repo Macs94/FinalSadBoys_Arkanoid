@@ -43,20 +43,13 @@ namespace SadArkanoid.Controladores
             connection.Close();
         }
 
-        public static bool ExecuteCheck(string act)
+        public static bool ExecuteCheckQuery(string act)
         {
             NpgsqlConnection connection = new NpgsqlConnection(sConnection);
             connection.Open();
             NpgsqlCommand command = new NpgsqlCommand(act, connection);
             var n = command.ExecuteScalar();
-            if (n != null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return (bool) n;
         }
     }
     

@@ -38,7 +38,7 @@ namespace SadArkanoid
         
         private void FormGame_Load(object sender, EventArgs e)
         {
-            //GameData.fullScreen = true;
+            // GameData.fullScreen = true;
             
             pfc.AddFontFile("../../Resources/zorque.ttf");
             
@@ -68,7 +68,7 @@ namespace SadArkanoid
         {
             GameData.gameOver = false;
             GameData.gameStart = false;
-            GameData.success = false;
+            GameData.victory = false;
             
             hp = 3;
             score = 0;
@@ -77,7 +77,7 @@ namespace SadArkanoid
             txtTime.Text = "TIME: " + 0;
             time = 0;
             blockCount = 0;
-            player.Top = Height - 80;
+            player.Top = Height - 70;
             player.Left = Width / 2 - 50;
 
             gameTimer.Interval = 20;
@@ -191,7 +191,7 @@ namespace SadArkanoid
                 if (blockCount == 0)
                 {
                     GameData.gameOver = true;
-                    GameData.success = true;
+                    GameData.victory = true;
                 }
 
                 gameIsOver();
@@ -214,11 +214,18 @@ namespace SadArkanoid
         
         private void keyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space)
+            if (!GameData.gameStart && e.KeyCode == Keys.Space)
             {
                 GameData.gameStart = true;
                 secondsTimer.Start();
                 controlsInfo.Visible = false;
+            }
+
+            if (GameData.gameOver && e.KeyCode == Keys.Space)
+            {
+                Controls.Clear();
+                InitializeComponent();
+                FormGame_Load(null, EventArgs.Empty);
             }
 
             if (e.KeyCode == Keys.Left)
@@ -229,7 +236,7 @@ namespace SadArkanoid
 
             if (e.KeyCode == Keys.Escape)
             {
-                MainMenu ventana = new MainMenu();
+                FormInterface ventana = new FormInterface();
                 ventana.Owner = this;
                 Hide();
                 ventana.ShowDialog();
@@ -258,11 +265,17 @@ namespace SadArkanoid
         {
             if (GameData.gameOver)
             {
-                gameTimer.Stop();
                 secondsTimer.Stop();
                 //playahata.score = score;
                 //UserDAO.updateScore(playahata.username,playahata.score);
-                MessageBox.Show("GAME OVER");
+                if (GameData.victory)
+                {
+                    
+                }
+                else
+                {
+                    
+                }
             }
         }
         
