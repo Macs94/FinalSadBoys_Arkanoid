@@ -41,11 +41,15 @@ namespace SadArkanoid.Controladores
             ConnectionDB.ExecuteNonQuery(sql);
         }
 
-        public static bool checkUserName(string username)
+        public static string checkUserName(string username)
         {
+            string val = "";
             string sql = String.Format(
-                "SELECT count(*) FROM PUBLIC.USER where username = @username and '@username'='{0}'",username);
-            return ConnectionDB.ExecuteCheck(sql);
+                "SELECT username FROM PUBLIC.USER WHERE username = '{0}';",
+                username);
+
+            val = ConnectionDB.ExecuteCheckUser(sql);
+            return val;
         }
     }
 }
