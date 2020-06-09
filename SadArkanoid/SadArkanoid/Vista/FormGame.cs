@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 using System.Windows.Forms;
+using SadArkanoid.Controladores;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
 
@@ -263,15 +264,29 @@ namespace SadArkanoid
             if (GameData.gameOver)
             {
                 GameData.gameStart = false;
-                //playahata.score = score;
-                //UserDAO.updateScore(playahata.username,playahata.score);
                 if (GameData.victory)
                 {
-                    
+                    playahata.score = score;
+                    UserDAO.updateScore(playahata.username,playahata.score);
+                    VictoryScreen.BackgroundImage = Resources.VictoryImg;
+                    VictoryScreen.BackgroundImageLayout = ImageLayout.Stretch;
+                    VictoryScreen.Height = (int) (Height * 0.65);
+                    VictoryScreen.Width = (int) (Width * 0.80);
+                    VictoryScreen.Top = (int) (Height * 0.20);
+                    VictoryScreen.Left = (int) (Width * 0.08);
+                    VictoryScreen.Show();
                 }
                 else
                 {
-                    
+                    playahata.score = score;
+                    UserDAO.updateScore(playahata.username,playahata.score);
+                    GameOverScreen.BackgroundImage = Resources.GameOverImg;
+                    GameOverScreen.BackgroundImageLayout = ImageLayout.Stretch;
+                    GameOverScreen.Height = (int) (Height * 0.5);
+                    GameOverScreen.Width = (int) (Width * 0.8);
+                    GameOverScreen.Top = (int) (Height * 0.25);
+                    GameOverScreen.Left = (int) (Width * 0.08);
+                    GameOverScreen.Show();
                 }
                 secondsTimer.Stop();
                 gameTimer.Stop();

@@ -1,5 +1,4 @@
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\bin\Debug\SadArkanoid.exe.config
-C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\bin\Debug\SadArkanoid.exe
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\bin\Debug\SadArkanoid.pdb
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.csprojAssemblyReference.cache
 C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.Properties.Resources.resources
@@ -108,3 +107,6 @@ C:\Users\ceapa\Desktop\ProyectoProgramacionOO\FinalSadBoys_Arkanoid\SadArkanoid\
 C:\Users\ceapa\Desktop\ProyectoProgramacionOO\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.HighScores.resources
 C:\Users\ceapa\Desktop\ProyectoProgramacionOO\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.UserCtrlMainMenu.resources
 C:\Users\ceapa\Desktop\ProyectoProgramacionOO\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.UserCtrlUser.resources
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.FormInterface.resources
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.UserCtrlMainMenu.resources
+C:\Users\Mario\Desktop\POO-2020\FinalSadBoys_Arkanoid\SadArkanoid\SadArkanoid\obj\Debug\SadArkanoid.UserCtrlUser.resources
