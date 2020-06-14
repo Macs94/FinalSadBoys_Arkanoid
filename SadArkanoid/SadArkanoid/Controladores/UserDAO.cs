@@ -41,17 +41,6 @@ namespace SadArkanoid.Controladores
             ConnectionDB.ExecuteNonQuery(sql);
         }
 
-        public static string checkUserName(string username)
-        {
-            string val = "";
-            string sql = String.Format(
-                "SELECT username FROM PUBLIC.USER WHERE username = '{0}';",
-                username);
-
-            val = ConnectionDB.ExecuteCheckUser(sql);
-            return val;
-        }
-        
         public static bool checkUserNameExists(string username)
         {
             string sql = String.Format(

@@ -98,12 +98,6 @@
         <Compile Include="Modelo\User.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
-        <Compile Include="Vista\ChooseUser.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Vista\ChooseUser.Designer.cs">
-          <DependentUpon>ChooseUser.cs</DependentUpon>
-        </Compile>
         <Compile Include="Vista\FormGame.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -121,12 +115,6 @@
         </Compile>
         <Compile Include="Vista\HighScores.Designer.cs">
           <DependentUpon>HighScores.cs</DependentUpon>
-        </Compile>
-        <Compile Include="Vista\MainMenu.cs">
-          <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="Vista\MainMenu.Designer.cs">
-          <DependentUpon>MainMenu.cs</DependentUpon>
         </Compile>
         <Compile Include="Vista\UserCtrlMainMenu.cs">
           <SubType>UserControl</SubType>
@@ -149,9 +137,6 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <EmbeddedResource Include="Vista\ChooseUser.resx">
-          <DependentUpon>ChooseUser.cs</DependentUpon>
-        </EmbeddedResource>
         <EmbeddedResource Include="Vista\FormGame.resx">
           <DependentUpon>FormGame.cs</DependentUpon>
         </EmbeddedResource>
@@ -160,9 +145,6 @@
         </EmbeddedResource>
         <EmbeddedResource Include="Vista\HighScores.resx">
           <DependentUpon>HighScores.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="Vista\MainMenu.resx">
-          <DependentUpon>MainMenu.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Vista\UserCtrlMainMenu.resx">
           <DependentUpon>UserCtrlMainMenu.cs</DependentUpon>

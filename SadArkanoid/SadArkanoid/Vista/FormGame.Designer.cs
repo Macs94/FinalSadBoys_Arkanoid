@@ -112,10 +112,10 @@ namespace SadArkanoid
             // player
             // 
             this.player.BackColor = System.Drawing.Color.Transparent;
-            this.player.Location = new System.Drawing.Point(460, 782);
-            this.player.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.player.Location = new System.Drawing.Point(322, 470);
+            this.player.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(191, 52);
+            this.player.Size = new System.Drawing.Size(134, 31);
             this.player.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.player.TabIndex = 1;
             this.player.TabStop = false;
@@ -123,10 +123,10 @@ namespace SadArkanoid
             // ball
             // 
             this.ball.BackColor = System.Drawing.Color.Transparent;
-            this.ball.Location = new System.Drawing.Point(522, 675);
-            this.ball.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.ball.Location = new System.Drawing.Point(365, 405);
+            this.ball.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ball.Name = "ball";
-            this.ball.Size = new System.Drawing.Size(42, 46);
+            this.ball.Size = new System.Drawing.Size(29, 28);
             this.ball.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ball.TabIndex = 2;
             this.ball.TabStop = false;
@@ -134,10 +134,10 @@ namespace SadArkanoid
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(-70, -758);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox3.Location = new System.Drawing.Point(-49, -455);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox3.Size = new System.Drawing.Size(176, 35);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -145,10 +145,10 @@ namespace SadArkanoid
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(633, -752);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox5.Location = new System.Drawing.Point(443, -451);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox5.Size = new System.Drawing.Size(176, 35);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
@@ -156,10 +156,10 @@ namespace SadArkanoid
             // pictureBox6
             // 
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(173, -1568);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox6.Location = new System.Drawing.Point(121, -940);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox6.Size = new System.Drawing.Size(176, 35);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 1;
             this.pictureBox6.TabStop = false;
@@ -167,10 +167,10 @@ namespace SadArkanoid
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Location = new System.Drawing.Point(283, -618);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox8.Location = new System.Drawing.Point(198, -370);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox8.Size = new System.Drawing.Size(176, 35);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 1;
             this.pictureBox8.TabStop = false;
@@ -178,10 +178,10 @@ namespace SadArkanoid
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Location = new System.Drawing.Point(167, -1431);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox9.Location = new System.Drawing.Point(117, -858);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox9.Size = new System.Drawing.Size(176, 35);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 1;
             this.pictureBox9.TabStop = false;
@@ -189,10 +189,10 @@ namespace SadArkanoid
             // pictureBox10
             // 
             this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Location = new System.Drawing.Point(-293, -2246);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox10.Location = new System.Drawing.Point(-205, -1348);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox10.Size = new System.Drawing.Size(176, 35);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 1;
             this.pictureBox10.TabStop = false;
@@ -200,10 +200,10 @@ namespace SadArkanoid
             // pictureBox12
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Location = new System.Drawing.Point(-69, -458);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox12.Location = new System.Drawing.Point(-48, -275);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox12.Size = new System.Drawing.Size(176, 35);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 1;
             this.pictureBox12.TabStop = false;
@@ -211,10 +211,10 @@ namespace SadArkanoid
             // pictureBox13
             // 
             this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Location = new System.Drawing.Point(177, -1268);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox13.Location = new System.Drawing.Point(124, -760);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox13.Size = new System.Drawing.Size(176, 35);
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 1;
             this.pictureBox13.TabStop = false;
@@ -222,10 +222,10 @@ namespace SadArkanoid
             // pictureBox14
             // 
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Location = new System.Drawing.Point(58, -2081);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox14.Location = new System.Drawing.Point(41, -1248);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox14.Size = new System.Drawing.Size(176, 35);
             this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox14.TabIndex = 1;
             this.pictureBox14.TabStop = false;
@@ -233,10 +233,10 @@ namespace SadArkanoid
             // pictureBox15
             // 
             this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Location = new System.Drawing.Point(-402, -2896);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox15.Location = new System.Drawing.Point(-281, -1738);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox15.Size = new System.Drawing.Size(176, 35);
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 1;
             this.pictureBox15.TabStop = false;
@@ -244,10 +244,10 @@ namespace SadArkanoid
             // pictureBox17
             // 
             this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox17.Location = new System.Drawing.Point(633, -446);
-            this.pictureBox17.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox17.Location = new System.Drawing.Point(443, -268);
+            this.pictureBox17.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox17.Size = new System.Drawing.Size(176, 35);
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 1;
             this.pictureBox17.TabStop = false;
@@ -255,10 +255,10 @@ namespace SadArkanoid
             // pictureBox18
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox18.Location = new System.Drawing.Point(167, -1125);
-            this.pictureBox18.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox18.Location = new System.Drawing.Point(117, -675);
+            this.pictureBox18.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox18.Size = new System.Drawing.Size(176, 35);
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 1;
             this.pictureBox18.TabStop = false;
@@ -266,10 +266,10 @@ namespace SadArkanoid
             // pictureBox19
             // 
             this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox19.Location = new System.Drawing.Point(410, -1935);
-            this.pictureBox19.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox19.Location = new System.Drawing.Point(287, -1161);
+            this.pictureBox19.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox19.Size = new System.Drawing.Size(176, 35);
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 1;
             this.pictureBox19.TabStop = false;
@@ -277,10 +277,10 @@ namespace SadArkanoid
             // pictureBox20
             // 
             this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox20.Location = new System.Drawing.Point(293, -2748);
-            this.pictureBox20.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox20.Location = new System.Drawing.Point(205, -1649);
+            this.pictureBox20.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox20.Size = new System.Drawing.Size(176, 35);
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 1;
             this.pictureBox20.TabStop = false;
@@ -288,10 +288,10 @@ namespace SadArkanoid
             // pictureBox21
             // 
             this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox21.Location = new System.Drawing.Point(-167, -3564);
-            this.pictureBox21.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox21.Location = new System.Drawing.Point(-117, -2138);
+            this.pictureBox21.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox21.Size = new System.Drawing.Size(176, 35);
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 1;
             this.pictureBox21.TabStop = false;
@@ -299,10 +299,10 @@ namespace SadArkanoid
             // pictureBox23
             // 
             this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox23.Location = new System.Drawing.Point(1298, -475);
-            this.pictureBox23.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox23.Location = new System.Drawing.Point(909, -285);
+            this.pictureBox23.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox23.Size = new System.Drawing.Size(176, 35);
             this.pictureBox23.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox23.TabIndex = 1;
             this.pictureBox23.TabStop = false;
@@ -310,10 +310,10 @@ namespace SadArkanoid
             // pictureBox24
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox24.Location = new System.Drawing.Point(1190, -1125);
-            this.pictureBox24.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox24.Location = new System.Drawing.Point(833, -675);
+            this.pictureBox24.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox24.Size = new System.Drawing.Size(176, 35);
             this.pictureBox24.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox24.TabIndex = 1;
             this.pictureBox24.TabStop = false;
@@ -321,10 +321,10 @@ namespace SadArkanoid
             // pictureBox25
             // 
             this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox25.Location = new System.Drawing.Point(723, -1804);
-            this.pictureBox25.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox25.Location = new System.Drawing.Point(506, -1082);
+            this.pictureBox25.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox25.Size = new System.Drawing.Size(176, 35);
             this.pictureBox25.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox25.TabIndex = 1;
             this.pictureBox25.TabStop = false;
@@ -332,10 +332,10 @@ namespace SadArkanoid
             // pictureBox26
             // 
             this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox26.Location = new System.Drawing.Point(967, -2614);
-            this.pictureBox26.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox26.Location = new System.Drawing.Point(677, -1568);
+            this.pictureBox26.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox26.Size = new System.Drawing.Size(176, 35);
             this.pictureBox26.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox26.TabIndex = 1;
             this.pictureBox26.TabStop = false;
@@ -343,10 +343,10 @@ namespace SadArkanoid
             // pictureBox27
             // 
             this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox27.Location = new System.Drawing.Point(850, -3429);
-            this.pictureBox27.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox27.Location = new System.Drawing.Point(595, -2057);
+            this.pictureBox27.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox27.Size = new System.Drawing.Size(176, 35);
             this.pictureBox27.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox27.TabIndex = 1;
             this.pictureBox27.TabStop = false;
@@ -354,10 +354,10 @@ namespace SadArkanoid
             // pictureBox28
             // 
             this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox28.Location = new System.Drawing.Point(390, -4242);
-            this.pictureBox28.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox28.Location = new System.Drawing.Point(273, -2545);
+            this.pictureBox28.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox28.Size = new System.Drawing.Size(176, 35);
             this.pictureBox28.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox28.TabIndex = 1;
             this.pictureBox28.TabStop = false;
@@ -365,10 +365,10 @@ namespace SadArkanoid
             // pictureBox30
             // 
             this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox30.Location = new System.Drawing.Point(1298, -606);
-            this.pictureBox30.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox30.Location = new System.Drawing.Point(909, -363);
+            this.pictureBox30.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox30.Size = new System.Drawing.Size(176, 35);
             this.pictureBox30.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox30.TabIndex = 1;
             this.pictureBox30.TabStop = false;
@@ -376,10 +376,10 @@ namespace SadArkanoid
             // pictureBox31
             // 
             this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox31.Location = new System.Drawing.Point(1190, -1256);
-            this.pictureBox31.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox31.Location = new System.Drawing.Point(833, -753);
+            this.pictureBox31.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox31.Size = new System.Drawing.Size(176, 35);
             this.pictureBox31.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox31.TabIndex = 1;
             this.pictureBox31.TabStop = false;
@@ -387,10 +387,10 @@ namespace SadArkanoid
             // pictureBox32
             // 
             this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox32.Location = new System.Drawing.Point(723, -1935);
-            this.pictureBox32.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox32.Location = new System.Drawing.Point(506, -1161);
+            this.pictureBox32.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox32.Size = new System.Drawing.Size(176, 35);
             this.pictureBox32.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox32.TabIndex = 1;
             this.pictureBox32.TabStop = false;
@@ -398,10 +398,10 @@ namespace SadArkanoid
             // pictureBox33
             // 
             this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox33.Location = new System.Drawing.Point(967, -2744);
-            this.pictureBox33.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox33.Location = new System.Drawing.Point(677, -1647);
+            this.pictureBox33.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox33.Size = new System.Drawing.Size(176, 35);
             this.pictureBox33.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox33.TabIndex = 1;
             this.pictureBox33.TabStop = false;
@@ -409,10 +409,10 @@ namespace SadArkanoid
             // pictureBox34
             // 
             this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox34.Location = new System.Drawing.Point(850, -3558);
-            this.pictureBox34.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox34.Location = new System.Drawing.Point(595, -2135);
+            this.pictureBox34.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox34.Size = new System.Drawing.Size(176, 35);
             this.pictureBox34.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox34.TabIndex = 1;
             this.pictureBox34.TabStop = false;
@@ -420,10 +420,10 @@ namespace SadArkanoid
             // pictureBox35
             // 
             this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox35.Location = new System.Drawing.Point(390, -4371);
-            this.pictureBox35.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.pictureBox35.Location = new System.Drawing.Point(273, -2623);
+            this.pictureBox35.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(251, 58);
+            this.pictureBox35.Size = new System.Drawing.Size(176, 35);
             this.pictureBox35.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox35.TabIndex = 1;
             this.pictureBox35.TabStop = false;
@@ -434,9 +434,10 @@ namespace SadArkanoid
             this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtTime.ForeColor = System.Drawing.Color.White;
-            this.txtTime.Location = new System.Drawing.Point(371, 19);
+            this.txtTime.Location = new System.Drawing.Point(260, 12);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(331, 64);
+            this.txtTime.Size = new System.Drawing.Size(232, 38);
             this.txtTime.TabIndex = 0;
             this.txtTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -448,10 +449,10 @@ namespace SadArkanoid
             // heart1
             // 
             this.heart1.BackColor = System.Drawing.Color.Transparent;
-            this.heart1.Location = new System.Drawing.Point(3, 19);
-            this.heart1.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.heart1.Location = new System.Drawing.Point(2, 12);
+            this.heart1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.heart1.Name = "heart1";
-            this.heart1.Size = new System.Drawing.Size(57, 61);
+            this.heart1.Size = new System.Drawing.Size(40, 37);
             this.heart1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart1.TabIndex = 2;
             this.heart1.TabStop = false;
@@ -460,10 +461,10 @@ namespace SadArkanoid
             // heart2
             // 
             this.heart2.BackColor = System.Drawing.Color.Transparent;
-            this.heart2.Location = new System.Drawing.Point(71, 19);
-            this.heart2.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.heart2.Location = new System.Drawing.Point(50, 12);
+            this.heart2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.heart2.Name = "heart2";
-            this.heart2.Size = new System.Drawing.Size(57, 61);
+            this.heart2.Size = new System.Drawing.Size(40, 37);
             this.heart2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart2.TabIndex = 2;
             this.heart2.TabStop = false;
@@ -472,10 +473,10 @@ namespace SadArkanoid
             // heart3
             // 
             this.heart3.BackColor = System.Drawing.Color.Transparent;
-            this.heart3.Location = new System.Drawing.Point(138, 19);
-            this.heart3.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.heart3.Location = new System.Drawing.Point(97, 12);
+            this.heart3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.heart3.Name = "heart3";
-            this.heart3.Size = new System.Drawing.Size(57, 61);
+            this.heart3.Size = new System.Drawing.Size(40, 37);
             this.heart3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.heart3.TabIndex = 2;
             this.heart3.TabStop = false;
@@ -487,9 +488,10 @@ namespace SadArkanoid
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(713, 19);
+            this.txtScore.Location = new System.Drawing.Point(499, 12);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(431, 64);
+            this.txtScore.Size = new System.Drawing.Size(302, 38);
             this.txtScore.TabIndex = 0;
             this.txtScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -501,27 +503,28 @@ namespace SadArkanoid
             // controlsInfo
             // 
             this.controlsInfo.BackColor = System.Drawing.Color.Transparent;
-            this.controlsInfo.Location = new System.Drawing.Point(163, 329);
-            this.controlsInfo.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.controlsInfo.Location = new System.Drawing.Point(114, 197);
+            this.controlsInfo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.controlsInfo.Name = "controlsInfo";
-            this.controlsInfo.Size = new System.Drawing.Size(791, 375);
+            this.controlsInfo.Size = new System.Drawing.Size(554, 225);
             this.controlsInfo.TabIndex = 3;
             this.controlsInfo.TabStop = false;
             // 
             // lblPlayer
             // 
-            this.lblPlayer.Location = new System.Drawing.Point(3, 86);
+            this.lblPlayer.Location = new System.Drawing.Point(2, 52);
+            this.lblPlayer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(364, 28);
+            this.lblPlayer.Size = new System.Drawing.Size(254, 17);
             this.lblPlayer.TabIndex = 4;
             // 
             // GameOverScreen
             // 
             this.GameOverScreen.BackColor = System.Drawing.Color.Transparent;
-            this.GameOverScreen.Location = new System.Drawing.Point(163, 259);
-            this.GameOverScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.GameOverScreen.Location = new System.Drawing.Point(114, 156);
+            this.GameOverScreen.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.GameOverScreen.Name = "GameOverScreen";
-            this.GameOverScreen.Size = new System.Drawing.Size(791, 425);
+            this.GameOverScreen.Size = new System.Drawing.Size(554, 255);
             this.GameOverScreen.TabIndex = 5;
             this.GameOverScreen.TabStop = false;
             this.GameOverScreen.Visible = false;
@@ -529,20 +532,21 @@ namespace SadArkanoid
             // VictoryScreen
             // 
             this.VictoryScreen.BackColor = System.Drawing.Color.Transparent;
-            this.VictoryScreen.Location = new System.Drawing.Point(160, 230);
+            this.VictoryScreen.Location = new System.Drawing.Point(112, 138);
+            this.VictoryScreen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.VictoryScreen.Name = "VictoryScreen";
-            this.VictoryScreen.Size = new System.Drawing.Size(793, 405);
+            this.VictoryScreen.Size = new System.Drawing.Size(555, 243);
             this.VictoryScreen.TabIndex = 6;
             this.VictoryScreen.TabStop = false;
             this.VictoryScreen.Visible = false;
             // 
             // FormGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1157, 1002);
+            this.ClientSize = new System.Drawing.Size(810, 456);
             this.Controls.Add(this.VictoryScreen);
             this.Controls.Add(this.GameOverScreen);
             this.Controls.Add(this.lblPlayer);
@@ -582,7 +586,7 @@ namespace SadArkanoid
             this.Controls.Add(this.txtScore);
             this.Controls.Add(this.txtTime);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormGame";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ARKANOID";

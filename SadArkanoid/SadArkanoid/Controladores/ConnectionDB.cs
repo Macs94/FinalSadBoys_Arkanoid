@@ -44,30 +44,6 @@ namespace SadArkanoid.Controladores
             connection.Close();
         }
 
-        public static string ExecuteCheckUser(string sql)
-        {
-            string value = "";
-            NpgsqlConnection conn = new NpgsqlConnection(sConnection);
-
-            try
-            {
-                NpgsqlCommand nc = new NpgsqlCommand(sql, conn);
-                conn.Open();
-                nc.Parameters.AddWithValue(NpgsqlDbType.Text, sql);
-                value = nc.ExecuteScalar().ToString();
-            }
-            catch (Exception e)
-            {
-                
-            }
-            finally
-            {
-                conn.Close();
-            }
-      
-            return value;
-        }
-        
         public static bool ExecuteCheckQuery(string act)
         {
             NpgsqlConnection connection = new NpgsqlConnection(sConnection);

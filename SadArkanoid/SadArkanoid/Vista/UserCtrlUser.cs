@@ -26,7 +26,7 @@ namespace SadArkanoid
             {
                 if (txtUsername.Text.Equals(""))
                 {
-                    MessageBox.Show("No se puede dejar campos vacios", "SadBoysArkanoid");
+                    lblMessage.Text = "No se permimten campos vacios";
                 }
                 else
                 {
@@ -52,8 +52,7 @@ namespace SadArkanoid
         {
             ((FormInterface)Parent).ChangeControl(new UserCtrlMainMenu());
         }
-
-
+        
         private void txtUsernameKeyDown(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
