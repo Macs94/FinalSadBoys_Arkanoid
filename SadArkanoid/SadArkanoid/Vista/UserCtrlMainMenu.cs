@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing.Text;
 using System.Windows.Forms;
 using SadArkanoid.Modelo;
 using SadArkanoid.Properties;
@@ -8,11 +7,10 @@ namespace SadArkanoid
 {
     public partial class UserCtrlMainMenu : UserControl
     {
-        PrivateFontCollection pfc = new PrivateFontCollection();
-        
         public UserCtrlMainMenu()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
 
         private void UserCtrlMainMenu_Load(object sender, EventArgs e)
@@ -27,19 +25,24 @@ namespace SadArkanoid
                 GameData.fullScreen = true;
             else
                 GameData.fullScreen = false;
-            
-            ((FormInterface)this.Parent).ChangeControl(new UserCtrlUser());
+
+            ((FormInterface)this.ParentForm).ChangeControl(new UserCtrlUser());
         }
 
         private void btnHighScore_Click(object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            ((FormInterface)this.ParentForm).ChangeControl(new UserCtrTopTen());
         }
         
         private void btnExit_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
         }
-       
+
+        private void UserCtrlMainMenu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+                btnPlay_Click_1(sender, e);
+        }
     }
 }

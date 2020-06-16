@@ -8,14 +8,21 @@ CREATE DATABASE sadboysarkanoid
     CONNECTION LIMIT = -1;
 
 
-CREATE TABLE public."user"
+CREATE TABLE public.user
 (
-    username character varying(25) COLLATE pg_catalog."default" NOT NULL,
-    score bigint,
-    CONSTRAINT user_pkey PRIMARY KEY (username)
-)
+    username varchar(25) primary key
+);
+ALTER TABLE public.user
+    OWNER to postgres;
 
-TABLESPACE pg_default;
-
-ALTER TABLE public."user"
+CREATE TABLE public.score
+(
+    idScore serial primary key,
+    score int,
+    username varchar(25) references public.user(username)
+    
+    ON DELETE CASCADE 
+    ON UPDATE CASCADE
+);
+ALTER TABLE public.score
     OWNER to postgres;

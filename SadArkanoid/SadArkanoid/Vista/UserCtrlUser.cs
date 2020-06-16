@@ -11,6 +11,7 @@ namespace SadArkanoid
         public UserCtrlUser()
         {
             InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
         
         private void UserCtrlUser_Load(object sender, EventArgs e)
@@ -34,11 +35,11 @@ namespace SadArkanoid
                     u.username = txtUsername.Text;
                     if (!UserDAO.checkUserNameExists(u.username))
                         UserDAO.newUser(u.username);
-                    ((FormInterface)Parent).Hide();
+                    ((FormInterface)ParentForm).Hide();
 
-                    ((FormInterface)Parent).Hide();
+                    ((FormInterface)ParentForm).Hide();
                     var form2 = new FormGame(u);
-                    form2.Closed += (s, args) => ((FormInterface)Parent).Close(); 
+                    form2.Closed += (s, args) => ((FormInterface)ParentForm).Close(); 
                     form2.Show();
                 }
             }
@@ -50,7 +51,7 @@ namespace SadArkanoid
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
-            ((FormInterface)Parent).ChangeControl(new UserCtrlMainMenu());
+            ((FormInterface)ParentForm).ChangeControl(new UserCtrlMainMenu());
         }
         
         private void txtUsernameKeyDown(object sender, KeyPressEventArgs e)

@@ -6,11 +6,12 @@ namespace SadArkanoid
     public partial class FormInterface : Form
     {
         private UserControl current = null;
-
+        
         public FormInterface()
         {
             InitializeComponent();
             current = userCtrlMainMenu1;
+            DoubleBuffered = true;
         }
 
         public void ChangeControl(UserControl newControl) 
@@ -24,11 +25,13 @@ namespace SadArkanoid
 
                 if (current != null)
                 {
-                    Controls.Remove(current);
+                    panel1.Controls.Remove(current);
                 }
 
-                Controls.Add(newControl);
                 current = newControl;
+                panel1.Controls.Add(current);
+                
+                
             }
             catch (Exception exception)
             {

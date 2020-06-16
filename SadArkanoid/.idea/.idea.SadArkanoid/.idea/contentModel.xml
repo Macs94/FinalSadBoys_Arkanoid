@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\ceapa\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\ceapa\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_SadArkanoid.-745945191.00" t="ExcludeRecursive" />
-    <e p="C:\Users\ceapa\Desktop\ProyectoProgramacionOO\FinalSadBoys_Arkanoid\SadArkanoid" t="IncludeFlat">
+    <e p="C:\Users\juanhumberto\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\juanhumberto\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_SadArkanoid.-972376779.00" t="ExcludeRecursive" />
+    <e p="C:\Users\juanhumberto\Documents\UCA 2020\POO\FinalSadBoys_Arkanoid\SadArkanoid" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="SadArkanoid" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controladores" t="Include">
           <e p="ConnectionDB.cs" t="Include" />
+          <e p="ScoreDAO.cs" t="Include" />
           <e p="UserDAO.cs" t="Include" />
         </e>
         <e p="Modelo" t="Include">
           <e p="CustomPictureBox.cs" t="Include" />
           <e p="GameData.cs" t="Include" />
+          <e p="Score.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
@@ -54,15 +56,15 @@
           <e p="FormInterface.cs" t="Include" />
           <e p="FormInterface.Designer.cs" t="Include" />
           <e p="FormInterface.resx" t="Include" />
-          <e p="HighScores.cs" t="Include" />
-          <e p="HighScores.Designer.cs" t="Include" />
-          <e p="HighScores.resx" t="Include" />
           <e p="UserCtrlMainMenu.cs" t="Include" />
           <e p="UserCtrlMainMenu.Designer.cs" t="Include" />
           <e p="UserCtrlMainMenu.resx" t="Include" />
           <e p="UserCtrlUser.cs" t="Include" />
           <e p="UserCtrlUser.Designer.cs" t="Include" />
           <e p="UserCtrlUser.resx" t="Include" />
+          <e p="UserCtrTopTen.cs" t="Include" />
+          <e p="UserCtrTopTen.Designer.cs" t="Include" />
+          <e p="UserCtrTopTen.resx" t="Include" />
         </e>
       </e>
       <e p="SadArkanoid.sln" t="IncludeFlat" />

@@ -16,7 +16,6 @@ namespace SadArkanoid.Controladores
             {
                 var u = new User();
                 u.username = col[0].ToString();
-                u.score = Convert.ToInt32(col[1].ToString());
                 lista.Add(u);
             } 
             return lista;
@@ -29,15 +28,6 @@ namespace SadArkanoid.Controladores
                 "VALUES('{0}');",
                 uname);
 
-            ConnectionDB.ExecuteNonQuery(sql);
-        }
-        
-        public static void updateScore(string uname, int scr)
-        {
-            string sql = String.Format(
-                "UPDATE PUBLIC.USER set score= {0} where username='{1}';",
-                scr, uname);
-            
             ConnectionDB.ExecuteNonQuery(sql);
         }
 

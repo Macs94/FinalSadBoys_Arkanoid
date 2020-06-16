@@ -266,8 +266,6 @@ namespace SadArkanoid
                 GameData.gameStart = false;
                 if (GameData.victory)
                 {
-                    playahata.score = score;
-                    UserDAO.updateScore(playahata.username,playahata.score);
                     VictoryScreen.BackgroundImage = Resources.VictoryImg;
                     VictoryScreen.BackgroundImageLayout = ImageLayout.Stretch;
                     VictoryScreen.Height = (int) (Height * 0.65);
@@ -278,8 +276,6 @@ namespace SadArkanoid
                 }
                 else
                 {
-                    playahata.score = score;
-                    UserDAO.updateScore(playahata.username,playahata.score);
                     GameOverScreen.BackgroundImage = Resources.GameOverImg;
                     GameOverScreen.BackgroundImageLayout = ImageLayout.Stretch;
                     GameOverScreen.Height = (int) (Height * 0.5);
@@ -290,6 +286,9 @@ namespace SadArkanoid
                 }
                 secondsTimer.Stop();
                 gameTimer.Stop();
+                
+                Score s = new Score(score, playahata.username);
+                ScoreDAO.addScore(s);
             }
         }
         

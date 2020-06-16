@@ -50,8 +50,18 @@ namespace SadArkanoid.Controladores
             connection.Open();
             NpgsqlCommand command = new NpgsqlCommand(act, connection);
             var n = command.ExecuteScalar();
+            connection.Close();
             return (bool) n;
         }
 
+        public static int ExecuteInttQuery(string act)
+        {
+            NpgsqlConnection connection = new NpgsqlConnection(sConnection);
+            connection.Open();
+            NpgsqlCommand command = new NpgsqlCommand(act, connection);
+            var n = command.ExecuteScalar();
+            connection.Close();
+            return Int32.Parse(n.ToString());
+        }
     }
 }
