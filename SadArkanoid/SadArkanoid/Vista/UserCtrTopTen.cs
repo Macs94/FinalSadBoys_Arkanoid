@@ -19,12 +19,11 @@ namespace SadArkanoid
 
         private void UserCtrTopTen_Load(object sender, EventArgs e)
         {
-           
-            loadLabels();
-            this.Dock = DockStyle.Fill;
+            LoadLabels();
+            Dock = DockStyle.Fill;
         }
 
-        private void loadLabels()
+        private void LoadLabels()
         {
             int I = 0;
             List<Score> list = ScoreDAO.getTop10();
@@ -56,7 +55,7 @@ namespace SadArkanoid
             }
         }
 
-        private void btn_return_Click(object sender, EventArgs e)
+        private void btnReturn_Click(object sender, EventArgs e)
         {
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrlMainMenu());
         }

@@ -11,7 +11,7 @@ namespace SadArkanoid.Controladores
         private static string host = "127.0.0.1",
             database = "sadboysarkanoid",
             userId = "postgres",
-            password = "uca";
+            password = "cassandra70948054";
 
         private static string sConnection =
             $"Server={host};Port=5432;User Id={userId};Password={password};Database={database};";

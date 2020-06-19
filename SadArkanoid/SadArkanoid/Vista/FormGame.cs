@@ -13,17 +13,11 @@ namespace SadArkanoid
         //ATRIBUTOS GLOBALES
         
         //controles del juego
-        private bool goLeft;
-        private bool goRight;
-        private int ballX;
-        private int ballY;
-        private int playerSpeed;
+        private bool goLeft, goRight;
+        private int ballX, ballY, playerSpeed;
         
         //estado del juego
-        private int score;
-        private int hp;
-        private int time;
-        private int blockCount;
+        private int score,hp, time, blockCount;
 
         //atributos diversos
         private Random rnd = new Random();
@@ -278,8 +272,10 @@ namespace SadArkanoid
          */
         private void keyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
-            {
+            try
+            { 
+                switch (e.KeyCode){
+                    
                 //si el juego no ha comenzado, comenzar juego
                 case Keys.Space:
                     if (!GameData.gameStart && !GameData.gameOver)
@@ -289,7 +285,7 @@ namespace SadArkanoid
                         controlsInfo.Visible = false;
                     }
                     break;
-                
+
                 //si el juego ha terminado, volver a jugar
                 case Keys.Enter:
                     if (GameData.gameOver)
@@ -319,6 +315,13 @@ namespace SadArkanoid
                     form2.Closed += (s, args) => this.Close(); 
                     form2.Show();
                     break;
+                default:
+                    throw new WrongKeyException("Presione las teclas indicadas");
+              } 
+            }
+            catch (WrongKeyException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -430,14 +433,16 @@ namespace SadArkanoid
                 for (int j = 0; j < xAxis; j++)
                 {
                     blockCount++;
-                    cpb[i, j] = new CustomPictureBox();
-                    cpb[i, j].Tag = "blocks";
-                    cpb[i, j].golpes = 1;
-                    cpb[i, j].BackgroundImageLayout = ImageLayout.Stretch;
-                    cpb[i, j].Height = pbHeight;
-                    cpb[i, j].Width = pbWidth;
-                    cpb[i, j].Left = j * pbWidth;
-                    cpb[i, j].Top = i * pbHeight + 70;
+                    cpb[i, j] = new CustomPictureBox
+                    {
+                        Tag = "blocks",
+                        golpes = 1,
+                        BackgroundImageLayout = ImageLayout.Stretch,
+                        Height = pbHeight,
+                        Width = pbWidth,
+                        Left = j * pbWidth,
+                        Top = i * pbHeight + 70
+                    };
                     switch (i)
                     {
                         case 0:

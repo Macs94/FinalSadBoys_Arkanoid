@@ -100,7 +100,7 @@ namespace SadArkanoid
             this.btn_return.TabIndex = 0;
             this.btn_return.Text = "Return";
             this.btn_return.UseVisualStyleBackColor = true;
-            this.btn_return.Click += new System.EventHandler(this.btn_return_Click);
+            this.btn_return.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // lblTopTen
             // 

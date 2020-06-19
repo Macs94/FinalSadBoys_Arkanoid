@@ -19,39 +19,43 @@ namespace SadArkanoid
         
         private void UserCtrlUser_Load(object sender, EventArgs e)
         {
-            
-            
             txtUsername.Focus();
             TitleCard.BackgroundImage = Resources.ArkanoidTitle2;
             TitleCard.BackgroundImageLayout = ImageLayout.Stretch;
-           
         }
         
         private void btnComenzar_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (txtUsername.Text.Equals(""))
-                {
-                    lblMessage.Text = "No se permimten campos vacios";
-                }
-                else
-                {
-                    User u = new User();
-                    u.username = txtUsername.Text;
-                    if (!UserDAO.checkUserNameExists(u.username))
-                        UserDAO.newUser(u.username);
-                    ((FormInterface)ParentForm).Hide();
+                if (txtUsername.Text.Trim().Length == 0)
+                    throw new EmptyUsernameException("No se permimten campos vacios");
+                
+                if (txtUsername.Text.Length > 25)
+                    throw new LengthExceededException("Nombre demasiado largo");
 
-                    ((FormInterface)ParentForm).Hide();
-                    var form2 = new FormGame(u);
-                    form2.Closed += (s, args) => ((FormInterface)ParentForm).Close(); 
-                    form2.Show();
-                }
+                User u = new User();
+                u.username = txtUsername.Text;
+                if (!UserDAO.checkUserNameExists(u.username)) 
+                    UserDAO.newUser(u.username);
+                ((FormInterface) ParentForm).Hide();
+
+                ((FormInterface) ParentForm).Hide();
+                var form2 = new FormGame(u);
+                form2.Closed += (s, args) => ((FormInterface) ParentForm).Close();
+                form2.Show();
+            }
+            catch (EmptyUsernameException ex)
+            {
+                lblMessage.Text = ex.Message;
+            }
+            catch (LengthExceededException ex)
+            {
+                lblMessage.Text = ex.Message;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un error");
+                MessageBox.Show("Error");
             }
         }
 
@@ -60,7 +64,7 @@ namespace SadArkanoid
             ((FormInterface)ParentForm).ChangeControl(new UserCtrlMainMenu());
         }
         
-        private void txtUsernameKeyDown(object sender, KeyPressEventArgs e)
+        private void UsernameKeyDown(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
                 btnComenzar_Click_1(sender, e);
