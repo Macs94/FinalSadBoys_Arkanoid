@@ -90,6 +90,8 @@ namespace SadArkanoid
             this.btn_return.FlatAppearance.BorderSize = 0;
             this.btn_return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btn_return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_return.Font = new System.Drawing.Font("Zorque", 10F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btn_return.ForeColor = System.Drawing.Color.White;
             this.btn_return.Location = new System.Drawing.Point(4, 6);
             this.btn_return.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
@@ -104,6 +106,8 @@ namespace SadArkanoid
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.lblTopTen, 2);
             this.lblTopTen.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTopTen.Font = new System.Drawing.Font("Zorque", 20F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTopTen.ForeColor = System.Drawing.Color.White;
             this.lblTopTen.Location = new System.Drawing.Point(263, 0);
             this.lblTopTen.Name = "lblTopTen";
