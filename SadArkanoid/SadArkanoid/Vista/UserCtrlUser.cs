@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Drawing;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using SadArkanoid.Controladores;
 using SadArkanoid.Modelo;
@@ -8,6 +10,7 @@ namespace SadArkanoid
 {
     public partial class UserCtrlUser : UserControl
     {
+        private PrivateFontCollection pfc = new PrivateFontCollection();
         public UserCtrlUser()
         {
             InitializeComponent();
@@ -16,9 +19,14 @@ namespace SadArkanoid
         
         private void UserCtrlUser_Load(object sender, EventArgs e)
         {
+            pfc.AddFontFile("../../Resources/zorque.ttf");
+            
             txtUsername.Focus();
             TitleCard.BackgroundImage = Resources.ArkanoidTitle2;
             TitleCard.BackgroundImageLayout = ImageLayout.Stretch;
+            btnComenzar.Font = new Font(pfc.Families[0],20);
+            btnReturn.Font = new Font(pfc.Families[0], 20);
+            txtUser.Font = new Font(pfc.Families[0], 20);
         }
         
         private void btnComenzar_Click_1(object sender, EventArgs e)

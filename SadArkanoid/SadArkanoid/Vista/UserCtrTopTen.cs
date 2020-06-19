@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Windows.Forms;
 using SadArkanoid.Controladores;
 using SadArkanoid.Modelo;
@@ -10,6 +11,7 @@ namespace SadArkanoid
     public partial class UserCtrTopTen : UserControl
     {
         Label[] labels = new Label[20];
+        private PrivateFontCollection pfc = new PrivateFontCollection();
         public UserCtrTopTen()
         {
             InitializeComponent();
@@ -17,6 +19,9 @@ namespace SadArkanoid
 
         private void UserCtrTopTen_Load(object sender, EventArgs e)
         {
+            pfc.AddFontFile("../../Resources/zorque.ttf");
+            btn_return.Font = new Font(pfc.Families[0], 10);
+            lblTopTen.Font = new Font(pfc.Families[0], 20);
             loadLabels();
             this.Dock = DockStyle.Fill;
         }
@@ -33,7 +38,8 @@ namespace SadArkanoid
                 tableLayoutPanel1.SetColumn(labels[i], 1);
                 labels[i].Text = list[i].username;
                 labels[i].TextAlign = ContentAlignment.MiddleCenter;
-                labels[i].Font = new Font("Consoles", 10);
+                labels[i].Font = new Font(pfc.Families[0], 10);
+                labels[i].ForeColor = Color.White;
                 labels[i].Dock = DockStyle.Fill;
                 I++;
             }
@@ -45,7 +51,8 @@ namespace SadArkanoid
                 tableLayoutPanel1.SetColumn(labels[I], 2);
                 labels[I].Text = list[i].score.ToString();
                 labels[I].TextAlign = ContentAlignment.MiddleCenter;
-                labels[I].Font = new Font("Consoles", 10);
+                labels[I].Font = new Font(pfc.Families[0], 10);
+                labels[I].ForeColor = Color.White;
                 labels[I].Dock = DockStyle.Fill;
                 I++;
             }

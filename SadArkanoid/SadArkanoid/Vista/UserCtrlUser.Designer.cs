@@ -33,65 +33,60 @@ namespace SadArkanoid
         {
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.btnReturn = new System.Windows.Forms.Button();
-            this.btnComenzar = new System.Windows.Forms.Button();
             this.txtUser = new System.Windows.Forms.Label();
             this.TitleCard = new System.Windows.Forms.PictureBox();
             this.lblMessage = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnComenzar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.TitleCard)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtUsername
             // 
+            this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsername.BackColor = System.Drawing.Color.Maroon;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtUsername, 4);
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F,
+                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
-            this.txtUsername.Location = new System.Drawing.Point(128, 198);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.txtUsername.Location = new System.Drawing.Point(245, 533);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(328, 38);
+            this.txtUsername.Size = new System.Drawing.Size(480, 53);
             this.txtUsername.TabIndex = 7;
             this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsernameKeyDown);
             // 
             // btnReturn
             // 
+            this.btnReturn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.SetColumnSpan(this.btnReturn, 3);
+            this.btnReturn.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnReturn.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnReturn.ForeColor = System.Drawing.Color.White;
-            this.btnReturn.Location = new System.Drawing.Point(84, 286);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.btnReturn.Location = new System.Drawing.Point(3, 710);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(155, 86);
+            this.btnReturn.Size = new System.Drawing.Size(478, 174);
             this.btnReturn.TabIndex = 6;
             this.btnReturn.Text = "Back to Menu";
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
-            // btnComenzar
-            // 
-            this.btnComenzar.FlatAppearance.BorderSize = 0;
-            this.btnComenzar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
-            this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComenzar.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnComenzar.ForeColor = System.Drawing.Color.White;
-            this.btnComenzar.Location = new System.Drawing.Point(348, 291);
-            this.btnComenzar.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.btnComenzar.Name = "btnComenzar";
-            this.btnComenzar.Size = new System.Drawing.Size(155, 77);
-            this.btnComenzar.TabIndex = 5;
-            this.btnComenzar.Text = "Begin Arkanoid";
-            this.btnComenzar.UseVisualStyleBackColor = true;
-            this.btnComenzar.Click += new System.EventHandler(this.btnComenzar_Click_1);
-            // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtUser, 4);
+            this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtUser.Font = new System.Drawing.Font("Consolas", 26.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUser.ForeColor = System.Drawing.Color.White;
-            this.txtUser.Location = new System.Drawing.Point(128, 130);
-            this.txtUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtUser.Location = new System.Drawing.Point(165, 354);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(328, 67);
+            this.txtUser.Size = new System.Drawing.Size(640, 177);
             this.txtUser.TabIndex = 4;
             this.txtUser.Text = "Username";
             this.txtUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,10 +94,12 @@ namespace SadArkanoid
             // TitleCard
             // 
             this.TitleCard.BackColor = System.Drawing.Color.Transparent;
-            this.TitleCard.Location = new System.Drawing.Point(128, 16);
-            this.TitleCard.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tableLayoutPanel1.SetColumnSpan(this.TitleCard, 4);
+            this.TitleCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TitleCard.Location = new System.Drawing.Point(165, 2);
+            this.TitleCard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TitleCard.Name = "TitleCard";
-            this.TitleCard.Size = new System.Drawing.Size(328, 89);
+            this.TitleCard.Size = new System.Drawing.Size(640, 173);
             this.TitleCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TitleCard.TabIndex = 8;
             this.TitleCard.TabStop = false;
@@ -110,32 +107,88 @@ namespace SadArkanoid
             // lblMessage
             // 
             this.lblMessage.ForeColor = System.Drawing.Color.White;
-            this.lblMessage.Location = new System.Drawing.Point(180, 237);
+            this.lblMessage.Location = new System.Drawing.Point(4, 0);
+            this.lblMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMessage.Name = "lblMessage";
-            this.lblMessage.Size = new System.Drawing.Size(213, 28);
+            this.lblMessage.Size = new System.Drawing.Size(154, 54);
             this.lblMessage.TabIndex = 9;
             this.lblMessage.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 6;
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.68892F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.62216F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.62216F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.68892F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.68892F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.68892F));
+            this.tableLayoutPanel1.Controls.Add(this.lblMessage, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.TitleCard, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnReturn, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtUser, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.txtUsername, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnComenzar, 3, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(973, 886);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // btnComenzar
+            // 
+            this.btnComenzar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.SetColumnSpan(this.btnComenzar, 3);
+            this.btnComenzar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnComenzar.FlatAppearance.BorderSize = 0;
+            this.btnComenzar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
+            this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComenzar.Font = new System.Drawing.Font("Consolas", 20.25F, System.Drawing.FontStyle.Regular,
+                System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnComenzar.ForeColor = System.Drawing.Color.White;
+            this.btnComenzar.Location = new System.Drawing.Point(487, 710);
+            this.btnComenzar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnComenzar.Name = "btnComenzar";
+            this.btnComenzar.Size = new System.Drawing.Size(483, 174);
+            this.btnComenzar.TabIndex = 10;
+            this.btnComenzar.Text = "Begin Arkanoid";
+            this.btnComenzar.UseVisualStyleBackColor = true;
+            // 
             // UserCtrlUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.Controls.Add(this.lblMessage);
-            this.Controls.Add(this.TitleCard);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnComenzar);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.Name = "UserCtrlUser";
-            this.Size = new System.Drawing.Size(584, 461);
+            this.Size = new System.Drawing.Size(973, 886);
             this.Load += new System.EventHandler(this.UserCtrlUser_Load);
             ((System.ComponentModel.ISupportInitialize) (this.TitleCard)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
         }
 
-        private System.Windows.Forms.Button btnComenzar;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.PictureBox TitleCard;
@@ -143,5 +196,8 @@ namespace SadArkanoid
         private System.Windows.Forms.TextBox txtUsername;
 
         #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnComenzar;
     }
 }

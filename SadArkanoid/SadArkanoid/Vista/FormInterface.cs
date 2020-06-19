@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace SadArkanoid
@@ -6,9 +7,10 @@ namespace SadArkanoid
     public partial class FormInterface : Form
     {
         private UserControl current = null;
-        
+        private PrivateFontCollection pfc = new PrivateFontCollection();
         public FormInterface()
         {
+            pfc.AddFontFile("../../Resources/zorque.ttf");
             InitializeComponent();
             current = userCtrlMainMenu1;
             DoubleBuffered = true;
