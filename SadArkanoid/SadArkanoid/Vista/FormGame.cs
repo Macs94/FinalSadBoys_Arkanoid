@@ -10,17 +10,22 @@ namespace SadArkanoid
 {
     public partial class FormGame : Form
     {
+        //ATRIBUTOS GLOBALES
+        
+        //controles del juego
         private bool goLeft;
         private bool goRight;
-
-        private int score;
         private int ballX;
         private int ballY;
         private int playerSpeed;
+        
+        //estado del juego
+        private int score;
         private int hp;
         private int time;
         private int blockCount;
 
+        //atributos diversos
         private Random rnd = new Random();
 
         private CustomPictureBox[,] cpb;
@@ -36,10 +41,18 @@ namespace SadArkanoid
             DoubleBuffered = true;
         }
         
+        //MÉTODOS
+        
+        /*
+         * Método: void FormGame_Load(object sender, EventArgs e)
+         * 
+         * Función: ocurre antes de mostrar la form
+         *
+         * Descripción: Verifica el tamaño de pantalla escogido y llama el método
+         * gameSetup() para preparar el juego.
+         */
         private void FormGame_Load(object sender, EventArgs e)
         {
-            GameData.softReset();
-            
             pfc.AddFontFile("../../Resources/zorque.ttf");
             
             if (GameData.fullScreen)
@@ -47,44 +60,58 @@ namespace SadArkanoid
             
             Height = ClientSize.Height;
             Width = ClientSize.Width;
-            gameSetUp();
             
-            gameTimer.Interval = 20;
-            secondsTimer.Interval = 1000;
-
-            lblPlayer.Text = playahata.username;
-            lblPlayer.Font = new Font(pfc.Families[0],12);
-            lblPlayer.ForeColor = Color.White;
-            lblPlayer.BackColor = Color.Transparent;
-
-            BackgroundImage = Resources.back;
-            BackgroundImageLayout = ImageLayout.Stretch;
-
-            player.Image = Resources.Player;
-            player.BackgroundImageLayout = ImageLayout.Stretch;
-
-            ball.Image = Resources.Ball;
-            ball.BackgroundImageLayout = ImageLayout.Stretch;
+            gameSetUp();
         }
         
+        /*
+         * Método: private void gameSetUp()
+         * 
+         * Función: preparar el juego
+         *
+         * Descripción: Reinicia los atributos de flujo (clase GameData) del juego
+         * y los atributos de estado del juego.
+         * Carga los aspectos gráficos del juego y configura su posición.
+         * Configura y activa el reloj que gestiona las actualizaciones del juego.
+         */
         private void gameSetUp()
         {
+            //reiniciar atributos de flujo
+            GameData.softReset();
+            
+            //reiniciar atributos de estado
             hp = 3;
             score = 0;
             playerSpeed = 12;
-            txtScore.Text = "SCORE: " + 0;
-            txtTime.Text = "TIME: " + 0;
             time = 0;
             blockCount = 0;
             player.Top = Height - 70;
             player.Left = Width / 2 - 50;
 
-            ballReset();
+            //aspectos gráficos
+            BackgroundImage = Resources.back;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            
+            lblPlayer.Text = playahata.username;
+            lblPlayer.Font = new Font(pfc.Families[0],12);
+            lblPlayer.ForeColor = Color.White;
+            lblPlayer.BackColor = Color.Transparent;
+            
+            player.Image = Resources.Player;
+            player.BackgroundImageLayout = ImageLayout.Stretch;
 
+            ballReset();
+            ball.Height = 15;
+            ball.Width = 15;
+            ball.Image = Resources.Ball;
+            ball.BackgroundImageLayout = ImageLayout.Stretch;
+
+            txtTime.Text = "TIME: " + 0;
             txtTime.Top = 10;
             txtTime.Left = Width / 2 - 80;
             txtTime.Font = new Font(pfc.Families[0], 22);
 
+            txtScore.Text = "SCORE: " + 0;
             txtScore.Top = 10;
             txtScore.Left = Width - txtScore.Width;
             txtScore.Font = new Font(pfc.Families[0], 22);
@@ -103,63 +130,91 @@ namespace SadArkanoid
             controlsInfo.Top = (int) (Height * 0.45);
             controlsInfo.Left = (int) (Width * 0.15);
             
+            //cargar bloques
             loadTiles1();
             
+            //configurar relojes
+            gameTimer.Interval = 20;
+            secondsTimer.Interval = 1000;
+            
+            //activar reloj de actualizaciones
             gameTimer.Start();
         }
         
+        /*
+         * Método: void gameTimerEvent(object sender, EventArgs e)
+         * 
+         * Función: gestiona las actualizaciones del juego
+         * 
+         * Descripción: Si el juego ha comenzado, actualiza la posición del jugador
+         * y de la bola, maneja la destrucción de bloques y actualiza los atributos de
+         * estado y flujo del juego cada 0.02 segundos.
+         * Si el juego no ha comenzado, solo permite al jugador moverse manteniendo
+         * la bola estática.
+         */
         private void gameTimerEvent(object sender, EventArgs e)
         {
+            //si el juego ha empezado, actualizar controles, bola, bloques y atributos 
             if (GameData.gameStart)
             {
                 txtScore.Text = "SCORE: " + score;
-
+                
+                //movimiento del jugador
                 if (goLeft && player.Left > 0)
                     player.Left -= playerSpeed;
                 
-                if (goRight && player.Right < Width)
+                else if (goRight && player.Right + 20 < Width)
                     player.Left += playerSpeed;
                 
+                //movimiento de la bola
                 ball.Left += ballX;
                 ball.Top += ballY;
 
-                if (ball.Left < 0 || ball.Right > Width)
-                    ballX = -ballX;
-
-                if (ball.Top < 0) 
-                    ballY = -ballY;
-
-                if (ball.Top > Height)
+                //eventos relacionados con la bola
+                switch (ball)
                 {
-                    hp--;
-                    GameData.gameStart = false;
-                    switch (hp)
-                    {
-                        case 2:
-                            heart3.Visible = false;
-                            break;
-                        case 1:
-                            heart2.Visible = false;
-                            break;
-                        case 0:
-                            heart1.Visible = false;
-                            GameData.gameOver = true;
-                            break;
-                    }
+                    case PictureBox b when b.Left < 0:
+                        ballX = -ballX;
+                        break;
                     
-                    ballReset();
+                    case PictureBox b when b.Right + 20 > Width:
+                        ballX = -ballX;
+                        break;
+                    
+                    case PictureBox b when b.Top < 0:
+                        ballY = -ballY;
+                        ball.Top += ballY;
+                        break;
+                    
+                    case PictureBox b when b.Top > Height:
+                        hp--;
+                        GameData.gameStart = false;
+                        switch (hp)
+                        {
+                            case 2:
+                                heart3.Visible = false;
+                                break;
+                            case 1:
+                                heart2.Visible = false;
+                                break;
+                            case 0:
+                                heart1.Visible = false;
+                                GameData.gameOver = true;
+                                break;
+                        }
+                        ballReset();
+                        break;
+                    
+                    case PictureBox b when b.Bounds.IntersectsWith(player.Bounds):
+                        ballY = -rnd.Next(5, 10);
+                        if (ballX < 0)
+                            ballX = -rnd.Next(5, 10);
+                        else
+                            ballX = rnd.Next(5, 10);
+                        break;
                 }
-                
-                if (ball.Bounds.IntersectsWith(player.Bounds))
-                {
-                    ballY = -rnd.Next(5, 12);
 
-                    if (ballX < 0)
-                        ballX = -rnd.Next(5, 12);
-                    else
-                        ballX = rnd.Next(5, 12);
-                }
-
+                //destrucción de bloque
                 foreach (Control block in Controls)
                 {
                     if (block is CustomPictureBox && block.Tag == "blocks")
@@ -167,15 +222,17 @@ namespace SadArkanoid
                         var customBlock = (CustomPictureBox) block;
                         if (ball.Bounds.IntersectsWith(customBlock.Bounds))
                         {
+                            ballY = -ballY;
+                            
+                            //bloque reforzado
                             if (customBlock.golpes == 2)
                             {
-                                ballY = -ballY;
                                 customBlock.golpes--;
                                 customBlock.BackgroundImage = Resources.Tile_silver_damaged;
                             }
-                            else 
+                            //bloque normal
+                            else
                             {
-                                ballY = -ballY;
                                 score += customBlock.addedScore;
                                 Controls.Remove(customBlock);
                                 blockCount--;
@@ -184,14 +241,17 @@ namespace SadArkanoid
                     }
                 }
 
+                //verificar si el jugdor ha ganado
                 if (blockCount == 0)
                 {
                     GameData.gameOver = true;
                     GameData.victory = true;
                 }
 
+                //verificar si el juego ha terminado
                 gameIsOver();
             }
+            //si el juego no ha empezado, solo mover jugador con bola estática
             else
             {
                 if (goLeft && player.Left > 0)
@@ -200,7 +260,7 @@ namespace SadArkanoid
                     ball.Left -= playerSpeed;
                 }
 
-                if (goRight && player.Right < Width)
+                else if (goRight && player.Right + 20 < Width)
                 {
                     player.Left += playerSpeed;
                     ball.Left += playerSpeed;
@@ -208,62 +268,106 @@ namespace SadArkanoid
             }
         }
         
+        /*
+         * Método: void keyDown(object sender, KeyEventArgs e)
+         * 
+         * Función: detecta pulsación de tecla
+         *
+         * Descripción: Maneja los controles del juego. Modifica los atributos de
+         * flujo que desencadenan los eventos del juego.
+         */
         private void keyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Space && !GameData.gameStart && !GameData.gameOver)
+            switch (e.KeyCode)
             {
-                GameData.gameStart = true;
-                secondsTimer.Start();
-                controlsInfo.Visible = false;
-            }
-
-            if (e.KeyCode == Keys.Enter && GameData.gameOver)
-            {
-                Controls.Clear();
-                InitializeComponent();
-                FormGame_Load(null, EventArgs.Empty);
-            }
-
-            if (e.KeyCode == Keys.Left)
-                goLeft = true;
-
-            if (e.KeyCode == Keys.Right)
-                goRight = true;
-
-            if (e.KeyCode == Keys.Escape)
-            {
-                gameTimer.Stop();
-                secondsTimer.Stop();
-
-                this.Hide();
-                var form2 = new FormInterface();
-                form2.Closed += (s, args) => this.Close(); 
-                form2.Show();
+                //si el juego no ha comenzado, comenzar juego
+                case Keys.Space:
+                    if (!GameData.gameStart && !GameData.gameOver)
+                    {
+                        GameData.gameStart = true;
+                        secondsTimer.Start();
+                        controlsInfo.Visible = false;
+                    }
+                    break;
+                
+                //si el juego ha terminado, volver a jugar
+                case Keys.Enter:
+                    if (GameData.gameOver)
+                    {
+                        Controls.Clear();
+                        InitializeComponent();
+                        FormGame_Load(null, EventArgs.Empty);
+                    }
+                    break;
+                
+                //moverse a la izquierda
+                case Keys.Left:
+                    goLeft = true;
+                    break;
+                
+                //moverse a la derecha
+                case Keys.Right:
+                    goRight = true;
+                    break;
+                
+                //regresar al menú principal
+                case Keys.Escape:
+                    gameTimer.Stop(); 
+                    secondsTimer.Stop();
+                    this.Hide();
+                    var form2 = new FormInterface();
+                    form2.Closed += (s, args) => this.Close(); 
+                    form2.Show();
+                    break;
             }
         }
 
+        /*
+         * Método: private void keyUp(object sender, KeyEventArgs e)
+         * 
+         * Función: detecta liberación de tecla
+         * 
+         * Descripción: Ayuda a manejar los controles del juego. Cancela el
+         * movimiento del jugador al liberar tecla.
+         */
         private void keyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
-                goLeft = false;
-
-            if (e.KeyCode == Keys.Right)
-                goRight = false;
+            switch (e.KeyCode)
+            {
+                case Keys.Left:
+                    goLeft = false;
+                    break;
+                
+                case Keys.Right:
+                    goRight = false;
+                    break;
+            }
         }
 
+        //reiniciar bola 
         private void ballReset()
         {
-            ball.Top = player.Top - 25;
-            ball.Left = player.Left + 45;
+            ball.Top = player.Top - 15;
+            ball.Left = player.Left + 50;
             ballX = 5;
             ballY = -5;
         }
         
+        /*
+         * Método: private void gameIsOver()
+         * 
+         * Función: finalizar juego
+         * 
+         * Descripción: Verifica si el juego ha terminado, ya sea con una victoria
+         * o con una derrota. Si el juego ha terminado, guarda la puntuación final
+         * del jugador y detiene el reloj de actualizaciones del juego.
+         */
         private void gameIsOver()
         {
             if (GameData.gameOver)
             {
                 GameData.gameStart = false;
+                //el jugador ha ganado
                 if (GameData.victory)
                 {
                     VictoryScreen.BackgroundImage = Resources.VictoryImg;
@@ -274,6 +378,7 @@ namespace SadArkanoid
                     VictoryScreen.Left = (int) (Width * 0.08);
                     VictoryScreen.Show();
                 }
+                //el jugador ha perdido
                 else
                 {
                     GameOverScreen.BackgroundImage = Resources.GameOverImg;
@@ -284,20 +389,32 @@ namespace SadArkanoid
                     GameOverScreen.Left = (int) (Width * 0.08);
                     GameOverScreen.Show();
                 }
+                
+                //detener relojes
                 secondsTimer.Stop();
                 gameTimer.Stop();
                 
+                //guardar puntuación
                 Score s = new Score(score, playahata.username);
                 ScoreDAO.addScore(s);
             }
         }
         
+        //temporizador en segundos
         private void secondsTimerEvent(object sender, EventArgs e)
         {
             time++;
             txtTime.Text = "TIME: " + time;
         }
 
+        /*
+         * Método: private void loadTiles1()
+         * 
+         * Función: carga los bloques del juego
+         * 
+         * Descripción: Crea los bloques del juego usando la clase customPictureBox.
+         * Agrega un color, resistencia y valor a cada bloque.
+         */
         private void loadTiles1()
         {
             int xAxis = 13;
@@ -320,7 +437,7 @@ namespace SadArkanoid
                     cpb[i, j].Height = pbHeight;
                     cpb[i, j].Width = pbWidth;
                     cpb[i, j].Left = j * pbWidth;
-                    cpb[i, j].Top = i * pbHeight + 100;
+                    cpb[i, j].Top = i * pbHeight + 70;
                     switch (i)
                     {
                         case 0:
