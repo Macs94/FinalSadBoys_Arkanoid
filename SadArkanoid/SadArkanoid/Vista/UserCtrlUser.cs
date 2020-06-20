@@ -22,6 +22,15 @@ namespace SadArkanoid
             txtUsername.Focus();
             TitleCard.BackgroundImage = Resources.ArkanoidTitle2;
             TitleCard.BackgroundImageLayout = ImageLayout.Stretch;
+            btnComenzar.Font = new Font("Zorque", 20.25F);
+            btnReturn.Font = new Font("Zorque", 20.25F);
+            txtUser.Font = new Font("Zorque", 26.25F);
+            lblMessage.Font = new Font("Zorque", 9.25F );
+            tableLayoutPanel1.SetRow(lblMessage,1);
+            tableLayoutPanel1.SetColumn(lblMessage,2);
+            tableLayoutPanel1.SetColumnSpan(lblMessage,2);
+            lblMessage.Dock = DockStyle.Fill;
+
         }
         
         private void btnComenzar_Click_1(object sender, EventArgs e)
@@ -29,7 +38,7 @@ namespace SadArkanoid
             try
             {
                 if (txtUsername.Text.Trim().Length == 0)
-                    throw new EmptyUsernameException("No se permimten campos vacios");
+                    throw new EmptyUsernameException("No se permiten campos vacios");
                 
                 if (txtUsername.Text.Length > 25)
                     throw new LengthExceededException("Nombre demasiado largo");

@@ -47,7 +47,7 @@ namespace SadArkanoid
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtUsername.BackColor = System.Drawing.Color.Maroon;
             this.tableLayoutPanel1.SetColumnSpan(this.txtUsername, 4);
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F,
+            this.txtUsername.Font = new System.Drawing.Font("Zorque", 20F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUsername.ForeColor = System.Drawing.Color.White;
             this.txtUsername.Location = new System.Drawing.Point(171, 332);
@@ -65,7 +65,7 @@ namespace SadArkanoid
             this.btnReturn.FlatAppearance.BorderSize = 0;
             this.btnReturn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnReturn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
+            this.btnReturn.Font = new System.Drawing.Font("Zorque", 20.25F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnReturn.ForeColor = System.Drawing.Color.White;
             this.btnReturn.Location = new System.Drawing.Point(2, 431);
@@ -81,7 +81,7 @@ namespace SadArkanoid
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.txtUser, 4);
             this.txtUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F,
+            this.txtUser.Font = new System.Drawing.Font("Zorque", 26.25F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.txtUser.ForeColor = System.Drawing.Color.White;
             this.txtUser.Location = new System.Drawing.Point(138, 232);
@@ -163,7 +163,7 @@ namespace SadArkanoid
             this.btnComenzar.FlatAppearance.BorderSize = 0;
             this.btnComenzar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnComenzar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnComenzar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
+            this.btnComenzar.Font = new System.Drawing.Font("Zorque", 20.25F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnComenzar.ForeColor = System.Drawing.Color.White;
             this.btnComenzar.Location = new System.Drawing.Point(342, 431);

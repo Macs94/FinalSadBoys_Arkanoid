@@ -22,6 +22,10 @@ namespace SadArkanoid
             
             TitleCard.BackgroundImage = Resources.ArkanoidTitle2;
             TitleCard.BackgroundImageLayout = ImageLayout.Stretch;
+            btnPlay.Font = new Font("Zorque", 20.25F);
+            btnHighScore.Font = new Font("Zorque", 20.25F);
+            btnExit.Font= new Font("Zorque", 20.25F);
+            checkFullscreen.Font = new Font("Zorque", 9.45F);
             
 
         }

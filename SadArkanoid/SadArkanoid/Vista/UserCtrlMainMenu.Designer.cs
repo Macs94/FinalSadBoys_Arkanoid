@@ -44,7 +44,7 @@ namespace SadArkanoid
             // checkFullscreen
             // 
             this.checkFullscreen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkFullscreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F,
+            this.checkFullscreen.Font = new System.Drawing.Font("Zorque", 9.75F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkFullscreen.ForeColor = System.Drawing.Color.White;
             this.checkFullscreen.Location = new System.Drawing.Point(566, 333);
@@ -63,7 +63,7 @@ namespace SadArkanoid
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
+            this.btnExit.Font = new System.Drawing.Font("Zorque", 20.25F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(218, 433);
@@ -84,7 +84,7 @@ namespace SadArkanoid
             this.btnHighScore.FlatAppearance.BorderSize = 0;
             this.btnHighScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnHighScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
+            this.btnHighScore.Font = new System.Drawing.Font("Zorque", 20.25F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnHighScore.ForeColor = System.Drawing.Color.White;
             this.btnHighScore.Location = new System.Drawing.Point(218, 327);
@@ -106,7 +106,7 @@ namespace SadArkanoid
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
+            this.btnPlay.Font = new System.Drawing.Font("Zorque", 20.25F,
                 System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
             this.btnPlay.Location = new System.Drawing.Point(218, 221);

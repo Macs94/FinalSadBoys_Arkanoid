@@ -10,8 +10,11 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controladores" t="Include">
           <e p="ConnectionDB.cs" t="Include" />
+          <e p="EmptyUsernameException.cs" t="Include" />
+          <e p="LengthExceededException.cs" t="Include" />
           <e p="ScoreDAO.cs" t="Include" />
           <e p="UserDAO.cs" t="Include" />
+          <e p="WrongKeyException.cs" t="Include" />
         </e>
         <e p="Modelo" t="Include">
           <e p="CustomPictureBox.cs" t="Include" />
