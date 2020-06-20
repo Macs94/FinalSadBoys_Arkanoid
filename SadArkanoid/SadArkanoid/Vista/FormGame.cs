@@ -373,6 +373,11 @@ namespace SadArkanoid
                 //el jugador ha ganado
                 if (GameData.victory)
                 {
+                    /*Aplicar multiplier basado en el tiempo que tomo para completar el juego y las vidas restantes
+                    del jugador.*/
+                    score += (score * 5 / time) * hp;
+                    
+                    
                     VictoryScreen.BackgroundImage = Resources.VictoryImg;
                     VictoryScreen.BackgroundImageLayout = ImageLayout.Stretch;
                     VictoryScreen.Height = (int) (Height * 0.65);
@@ -400,6 +405,7 @@ namespace SadArkanoid
                 //guardar puntuación
                 Score s = new Score(score, playahata.username);
                 ScoreDAO.addScore(s);
+                
             }
         }
         

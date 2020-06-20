@@ -56,31 +56,33 @@ namespace SadArkanoid
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
+            this.tableLayoutPanel1.RowCount = 13;
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.94018F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.008F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.004F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.278165F));
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.362545F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1042, 944);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -104,9 +106,11 @@ namespace SadArkanoid
             // 
             // lblTopTen
             // 
+            this.lblTopTen.BackColor = System.Drawing.Color.Black;
             this.tableLayoutPanel1.SetColumnSpan(this.lblTopTen, 2);
             this.lblTopTen.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTopTen.Font = new System.Drawing.Font("Zorque", 20F, System.Drawing.FontStyle.Regular,
+            this.lblTopTen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTopTen.Font = new System.Drawing.Font("Zorque", 22F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblTopTen.ForeColor = System.Drawing.Color.White;
             this.lblTopTen.Location = new System.Drawing.Point(263, 0);
