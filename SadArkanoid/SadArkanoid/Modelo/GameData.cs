@@ -11,7 +11,7 @@ namespace SadArkanoid.Modelo
         public static bool victory { get; set; }
 
         //reiniciar atributos
-        public static void softReset()
+        public static void SoftReset()
         {
             gameStart = false;
             gameOver = false;

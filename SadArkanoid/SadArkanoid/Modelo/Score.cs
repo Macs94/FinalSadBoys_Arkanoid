@@ -15,12 +15,5 @@
             this.score = score;
             this.username = username;
         }
-
-        public Score(int idScore, int score, string username)
-        {
-            this.idScore = idScore;
-            this.score = score;
-            this.username = username;
-        }
     }
 }

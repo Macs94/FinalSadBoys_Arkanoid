@@ -45,7 +45,7 @@ namespace SadArkanoid
             lblName.Dock = DockStyle.Fill;
             lblScore.Dock = DockStyle.Fill;
             int I = 0;
-            List<Score> list = ScoreDAO.getTop10();
+            List<Score> list = ScoreDAO.GetTop10();
             for (int i = 0; i < list.Count; i++)
             {
                 labels[i] = new Label();
@@ -74,7 +74,7 @@ namespace SadArkanoid
             }
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void BtnReturn_Click(object sender, EventArgs e)
         {
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrlMainMenu());
         }

@@ -443,7 +443,7 @@ namespace SadArkanoid
             // gameTimer
             // 
             this.gameTimer.Interval = 20;
-            this.gameTimer.Tick += new System.EventHandler(this.gameTimerEvent);
+            this.gameTimer.Tick += new System.EventHandler(this.GameTimerEvent);
             // 
             // heart1
             // 
@@ -496,7 +496,7 @@ namespace SadArkanoid
             // secondsTimer
             // 
             this.secondsTimer.Interval = 1000;
-            this.secondsTimer.Tick += new System.EventHandler(this.secondsTimerEvent);
+            this.secondsTimer.Tick += new System.EventHandler(this.SecondsTimerEvent);
             // 
             // controlsInfo
             // 

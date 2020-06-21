@@ -6,7 +6,7 @@ using SadArkanoid.Modelo;
 
 namespace SadArkanoid.Controladores
 {
-    public class ConnectionDB
+    public static class ConnectionDB
     {
         private static string host = "127.0.0.1",
             database = "sadboysarkanoid",

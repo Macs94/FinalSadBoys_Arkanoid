@@ -43,9 +43,9 @@ namespace SadArkanoid
             this.panel1.Controls.Add(this.userCtrlMainMenu1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(973, 789);
+            this.panel1.Size = new System.Drawing.Size(681, 449);
             this.panel1.TabIndex = 0;
             // 
             // userCtrlMainMenu1
@@ -54,18 +54,18 @@ namespace SadArkanoid
             this.userCtrlMainMenu1.BackColor = System.Drawing.Color.Black;
             this.userCtrlMainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userCtrlMainMenu1.Location = new System.Drawing.Point(0, 0);
-            this.userCtrlMainMenu1.Margin = new System.Windows.Forms.Padding(7, 10, 7, 10);
+            this.userCtrlMainMenu1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.userCtrlMainMenu1.Name = "userCtrlMainMenu1";
-            this.userCtrlMainMenu1.Size = new System.Drawing.Size(973, 789);
+            this.userCtrlMainMenu1.Size = new System.Drawing.Size(681, 449);
             this.userCtrlMainMenu1.TabIndex = 0;
             // 
             // FormInterface
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 789);
+            this.ClientSize = new System.Drawing.Size(681, 449);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 6, 3, 6);
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sad Arkanoid";

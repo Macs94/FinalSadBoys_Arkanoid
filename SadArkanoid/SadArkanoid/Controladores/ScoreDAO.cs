@@ -5,9 +5,9 @@ using SadArkanoid.Modelo;
 
 namespace SadArkanoid.Controladores
 {
-    public class ScoreDAO
+    public static class ScoreDAO
     {
-        public static void addScore(Score s)
+        public static void AddScore(Score s)
         {
             string countScoresSql = String.Format("SELECT COUNT(*) FROM score WHERE username='{0}';",
                 s.username);
@@ -39,7 +39,7 @@ namespace SadArkanoid.Controladores
             }
         }
         
-        public static List<Score> getTop10()
+        public static List<Score> GetTop10()
         {
             string sql = "SELECT * FROM score ORDER BY score DESC LIMIT 10;";
 

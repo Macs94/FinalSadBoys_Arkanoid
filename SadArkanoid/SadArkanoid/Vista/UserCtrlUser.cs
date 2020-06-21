@@ -33,7 +33,7 @@ namespace SadArkanoid
 
         }
         
-        private void btnComenzar_Click_1(object sender, EventArgs e)
+        private void BtnStart_Click(object sender, EventArgs e)
         {
             try
             {
@@ -45,8 +45,8 @@ namespace SadArkanoid
 
                 User u = new User();
                 u.username = txtUsername.Text;
-                if (!UserDAO.checkUserNameExists(u.username)) 
-                    UserDAO.newUser(u.username);
+                if (!UserDAO.CheckUserNameExists(u.username)) 
+                    UserDAO.NewUser(u.username);
                 ((FormInterface) ParentForm).Hide();
 
                 ((FormInterface) ParentForm).Hide();
@@ -68,7 +68,7 @@ namespace SadArkanoid
             }
         }
 
-        private void btnReturn_Click(object sender, EventArgs e)
+        private void BtnReturn_Click(object sender, EventArgs e)
         {
             ((FormInterface)ParentForm).ChangeControl(new UserCtrlMainMenu());
         }
@@ -76,7 +76,7 @@ namespace SadArkanoid
         private void UsernameKeyDown(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                btnComenzar_Click_1(sender, e);
+                BtnStart_Click(sender, e);
         }
     }
 }

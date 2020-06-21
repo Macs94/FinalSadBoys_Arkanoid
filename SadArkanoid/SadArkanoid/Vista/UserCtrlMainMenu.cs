@@ -30,7 +30,7 @@ namespace SadArkanoid
 
         }
 
-        private void btnPlay_Click_1(object sender, EventArgs e)
+        private void BtnPlay_Click(object sender, EventArgs e)
         {
             if (checkFullscreen.Checked)
                 GameData.fullScreen = true;
@@ -40,12 +40,12 @@ namespace SadArkanoid
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrlUser());
         }
 
-        private void btnHighScore_Click(object sender, EventArgs e)
+        private void BtnHighScore_Click(object sender, EventArgs e)
         {
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrTopTen());
         }
         
-        private void btnExit_Click_1(object sender, EventArgs e)
+        private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -53,7 +53,7 @@ namespace SadArkanoid
         private void UserCtrlMainMenu_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
-                btnPlay_Click_1(sender, e);
+                BtnPlay_Click(sender, e);
         }
 
        

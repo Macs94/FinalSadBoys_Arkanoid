@@ -55,11 +55,11 @@ namespace SadArkanoid
             Height = ClientSize.Height;
             Width = ClientSize.Width;
             
-            gameSetUp();
+            GameSetUp();
         }
         
         /*
-         * Método: private void gameSetUp()
+         * Método: private void GameSetUp()
          * 
          * Función: preparar el juego
          *
@@ -68,10 +68,10 @@ namespace SadArkanoid
          * Carga los aspectos gráficos del juego y configura su posición.
          * Configura y activa el reloj que gestiona las actualizaciones del juego.
          */
-        private void gameSetUp()
+        private void GameSetUp()
         {
             //reiniciar atributos de flujo
-            GameData.softReset();
+            GameData.SoftReset();
             
             //reiniciar atributos de estado
             hp = 3;
@@ -94,7 +94,7 @@ namespace SadArkanoid
             player.Image = Resources.Player;
             player.BackgroundImageLayout = ImageLayout.Stretch;
 
-            ballReset();
+            BallReset();
             ball.Height = 15;
             ball.Width = 15;
             ball.Image = Resources.Ball;
@@ -125,7 +125,7 @@ namespace SadArkanoid
             controlsInfo.Left = (int) (Width * 0.15);
             
             //cargar bloques
-            loadTiles1();
+            LoadTiles();
             
             //configurar relojes
             gameTimer.Interval = 20;
@@ -136,7 +136,7 @@ namespace SadArkanoid
         }
         
         /*
-         * Método: void gameTimerEvent(object sender, EventArgs e)
+         * Método: void GameTimerEvent(object sender, EventArgs e)
          * 
          * Función: gestiona las actualizaciones del juego
          * 
@@ -146,7 +146,7 @@ namespace SadArkanoid
          * Si el juego no ha comenzado, solo permite al jugador moverse manteniendo
          * la bola estática.
          */
-        private void gameTimerEvent(object sender, EventArgs e)
+        private void GameTimerEvent(object sender, EventArgs e)
         {
             //si el juego ha empezado, actualizar controles, bola, bloques y atributos 
             if (GameData.gameStart)
@@ -196,7 +196,7 @@ namespace SadArkanoid
                                 GameData.gameOver = true;
                                 break;
                         }
-                        ballReset();
+                        BallReset();
                         break;
                     
                     case PictureBox b when b.Bounds.IntersectsWith(player.Bounds):
@@ -219,9 +219,9 @@ namespace SadArkanoid
                             ballY = -ballY;
                             
                             //bloque reforzado
-                            if (customBlock.golpes == 2)
+                            if (customBlock.hits == 2)
                             {
-                                customBlock.golpes--;
+                                customBlock.hits--;
                                 customBlock.BackgroundImage = Resources.Tile_silver_damaged;
                             }
                             //bloque normal
@@ -243,7 +243,7 @@ namespace SadArkanoid
                 }
 
                 //verificar si el juego ha terminado
-                gameIsOver();
+                GameIsOver();
             }
             //si el juego no ha empezado, solo mover jugador con bola estática
             else
@@ -348,7 +348,7 @@ namespace SadArkanoid
         }
 
         //reiniciar bola 
-        private void ballReset()
+        private void BallReset()
         {
             ball.Top = player.Top - 15;
             ball.Left = player.Left + 50;
@@ -357,7 +357,7 @@ namespace SadArkanoid
         }
         
         /*
-         * Método: private void gameIsOver()
+         * Método: private void GameIsOver()
          * 
          * Función: finalizar juego
          * 
@@ -365,7 +365,7 @@ namespace SadArkanoid
          * o con una derrota. Si el juego ha terminado, guarda la puntuación final
          * del jugador y detiene el reloj de actualizaciones del juego.
          */
-        private void gameIsOver()
+        private void GameIsOver()
         {
             if (GameData.gameOver)
             {
@@ -404,27 +404,27 @@ namespace SadArkanoid
                 
                 //guardar puntuación
                 Score s = new Score(score, playahata.username);
-                ScoreDAO.addScore(s);
+                ScoreDAO.AddScore(s);
                 
             }
         }
         
         //temporizador en segundos
-        private void secondsTimerEvent(object sender, EventArgs e)
+        private void SecondsTimerEvent(object sender, EventArgs e)
         {
             time++;
             txtTime.Text = "TIME: " + time;
         }
 
         /*
-         * Método: private void loadTiles1()
+         * Método: private void LoadTiles()
          * 
          * Función: carga los bloques del juego
          * 
          * Descripción: Crea los bloques del juego usando la clase customPictureBox.
          * Agrega un color, resistencia y valor a cada bloque.
          */
-        private void loadTiles1()
+        private void LoadTiles()
         {
             int xAxis = 13;
             int yAxis = 6;
@@ -442,7 +442,7 @@ namespace SadArkanoid
                     cpb[i, j] = new CustomPictureBox
                     {
                         Tag = "blocks",
-                        golpes = 1,
+                        hits = 1,
                         BackgroundImageLayout = ImageLayout.Stretch,
                         Height = pbHeight,
                         Width = pbWidth,
@@ -452,7 +452,7 @@ namespace SadArkanoid
                     switch (i)
                     {
                         case 0:
-                            cpb[i, j].golpes = 2;
+                            cpb[i, j].hits = 2;
                             cpb[i, j].BackgroundImage = Resources.Tile_silver;
                             cpb[i, j].addedScore = 50;
                             break;
