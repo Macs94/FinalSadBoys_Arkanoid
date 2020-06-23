@@ -14,6 +14,14 @@ namespace SadArkanoid.Controladores
             ConnectionDB.ExecuteNonQuery(sql);
         }
 
+        /*
+        * Método: bool CheckUserNameExists(string username)
+        *
+        * Función: verificar la existencia de un jugador
+        *
+        * Descripción: Este método regresa true si el jugador 'username'
+        * existe en la base de datos, y regresa false si no existe. 
+        */
         public static bool CheckUserNameExists(string username)
         {
             string sql = String.Format(

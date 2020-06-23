@@ -14,10 +14,10 @@ namespace SadArkanoid
         
         //controles del juego
         private bool goLeft, goRight;
-        private int ballX, ballY, playerSpeed;
-        
+        private int ballX, ballY, ballCenterX, ballCenterY, playerSpeed;
+
         //estado del juego
-        private int score,hp, time, blockCount;
+        private int score, hp, time, blockCount;
 
         //atributos diversos
         private Random rnd = new Random();
@@ -95,8 +95,8 @@ namespace SadArkanoid
             player.BackgroundImageLayout = ImageLayout.Stretch;
 
             BallReset();
-            ball.Height = 15;
-            ball.Width = 15;
+            ball.Height = 14;
+            ball.Width = 14;
             ball.Image = Resources.Ball;
             ball.BackgroundImageLayout = ImageLayout.Stretch;
 
@@ -209,28 +209,38 @@ namespace SadArkanoid
                 }
 
                 //destrucción de bloque
-                foreach (Control block in Controls)
+                for (int i = 5; i >= 0; i--)
                 {
-                    if (block is CustomPictureBox && block.Tag == "blocks")
+                    for (int j = 0; j < 10 ; j++)
                     {
-                        var customBlock = (CustomPictureBox) block;
-                        if (ball.Bounds.IntersectsWith(customBlock.Bounds))
+                        if (cpb[i,j] != null && cpb[i,j].Bounds.IntersectsWith(ball.Bounds))
                         {
-                            ballY = -ballY;
+                            ballCenterX = ball.Left + 7;
+                            ballCenterY = ball.Top + 7;
                             
+                            if (ballCenterY <= cpb[i,j].Bottom && ballCenterY >= cpb[i,j].Top
+                                && (ballCenterX <= cpb[i,j].Left || ballCenterX >= cpb[i,j].Right))
+                                ballX = -ballX;
+                            else
+                                ballY = -ballY;
+
                             //bloque reforzado
-                            if (customBlock.hits == 2)
+                            if (cpb[i,j].hits == 2)
                             {
-                                customBlock.hits--;
-                                customBlock.BackgroundImage = Resources.Tile_silver_damaged;
+                                cpb[i,j].hits--;
+                                cpb[i,j].BackgroundImage = Resources.Tile_silver_damaged;
                             }
                             //bloque normal
                             else
                             {
-                                score += customBlock.addedScore;
-                                Controls.Remove(customBlock);
+                                score += cpb[i,j].addedScore;
+                                Controls.Remove(cpb[i,j]);
+                                cpb[i, j] = null;
                                 blockCount--;
                             }
+                            
+                            i = -1;
+                            break;
                         }
                     }
                 }
@@ -272,9 +282,7 @@ namespace SadArkanoid
          */
         private void keyDown(object sender, KeyEventArgs e)
         {
-            try
-            { 
-                switch (e.KeyCode){
+            switch (e.KeyCode){
                     
                 //si el juego no ha comenzado, comenzar juego
                 case Keys.Space:
@@ -315,13 +323,6 @@ namespace SadArkanoid
                     form2.Closed += (s, args) => this.Close(); 
                     form2.Show();
                     break;
-                default:
-                    throw new WrongKeyException("Presione las teclas indicadas");
-              } 
-            }
-            catch (WrongKeyException ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -347,7 +348,7 @@ namespace SadArkanoid
             }
         }
 
-        //reiniciar bola 
+        //Método para reiniciar posición y velocidad de la bola 
         private void BallReset()
         {
             ball.Top = player.Top - 15;
@@ -373,10 +374,9 @@ namespace SadArkanoid
                 //el jugador ha ganado
                 if (GameData.victory)
                 {
-                    /*Aplicar multiplier basado en el tiempo que tomo para completar el juego y las vidas restantes
-                    del jugador.*/
+                    /*Aplicar multiplier basado en el tiempo que tomo para completar
+                     el juego y las vidas restantes del jugador.*/
                     score += (score * 5 / time) * hp;
-                    
                     
                     VictoryScreen.BackgroundImage = Resources.VictoryImg;
                     VictoryScreen.BackgroundImageLayout = ImageLayout.Stretch;
@@ -409,7 +409,7 @@ namespace SadArkanoid
             }
         }
         
-        //temporizador en segundos
+        //Método para calcular el tiempo transcurrido en juego en segundos
         private void SecondsTimerEvent(object sender, EventArgs e)
         {
             time++;
@@ -426,11 +426,11 @@ namespace SadArkanoid
          */
         private void LoadTiles()
         {
-            int xAxis = 13;
+            int xAxis = 10;
             int yAxis = 6;
 
-            int pbHeight = (int) (Height * 0.2) / yAxis;
-            int pbWidth = (Width - xAxis) / xAxis;
+            float pbHeight = (float) (Height * 0.25) / yAxis;
+            float pbWidth = (Width - xAxis) / xAxis;
             
             cpb = new CustomPictureBox[yAxis, xAxis];
 
@@ -444,11 +444,13 @@ namespace SadArkanoid
                         Tag = "blocks",
                         hits = 1,
                         BackgroundImageLayout = ImageLayout.Stretch,
-                        Height = pbHeight,
-                        Width = pbWidth,
-                        Left = j * pbWidth,
-                        Top = i * pbHeight + 70
+                        Height = (int) pbHeight,
+                        Width = (int) pbWidth,
+                        Left = (int) (j * pbWidth),
+                        Top = (int) (i * pbHeight + 70)
                     };
+                    
+                    //características especiales
                     switch (i)
                     {
                         case 0:
