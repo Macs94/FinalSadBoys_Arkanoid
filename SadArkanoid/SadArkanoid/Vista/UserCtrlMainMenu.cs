@@ -15,6 +15,17 @@ namespace SadArkanoid
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
+        //MÉTODOS 
+        /*
+         * Método: void UserCtrlMainMenu_Load(object sender, EventArgs e)
+         *
+         * Función: ocurre antes de mostrar el user control.
+         *
+         * Descripción: Carga la imagen del título (TitleCard) y asigna la fuente personalizada
+         * "zorque" a los 3 botones del menú principal.
+         *
+         * 
+         */
 
         private void UserCtrlMainMenu_Load(object sender, EventArgs e)
         {
@@ -29,6 +40,15 @@ namespace SadArkanoid
             
 
         }
+        /*
+         * Método: void BtnPlay_Click(object sender, EventArgs e)
+         *
+         * Función: detecta si se ha hecho click en el botón Play.
+         *
+         * Descripción: modifica el valor de verdad de GameData.fullScreen dependiendo si el checkFullscreen esta
+         * chequeado o no y cambia el user control a UserCtrlUser (para introducir usuario).
+         * 
+         */
 
         private void BtnPlay_Click(object sender, EventArgs e)
         {
@@ -39,16 +59,40 @@ namespace SadArkanoid
 
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrlUser());
         }
+        /*
+         * Método: void BtnHighScore_Click(object sender, EventArgs e)
+         *
+         * Función: detecta si se ha hecho click en el botón HighScore.
+         *
+         * Descripción: cambia el user control a UserCtrlTopTen (máximas puntuaciones).
+         * 
+         */
 
         private void BtnHighScore_Click(object sender, EventArgs e)
         {
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrTopTen());
         }
         
+        /*
+         * Método: void BtnExit_Click(object sender, EventArgs e)
+         *
+         * Función: detecta si se ha hecho click en el botón Exit.
+         *
+         * Descripción: finaliza la aplicación.
+         * 
+         */
         private void BtnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        /*
+         * Método: void UserCtrlMainMenu_KeyPress(object sender, EventArgs e)
+         *
+         * Función: detecta pulsación de tecla.
+         *
+         * Descripción: si el usuario presiona la tecla Intro/Enter se llama al método BtnPlay_Click.
+         * 
+         */
 
         private void UserCtrlMainMenu_KeyPress(object sender, KeyPressEventArgs e)
         {

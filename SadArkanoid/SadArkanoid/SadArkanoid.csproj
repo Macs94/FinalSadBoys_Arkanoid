@@ -94,6 +94,7 @@
         <Compile Include="Controladores\ConnectionDB.cs" />
         <Compile Include="Controladores\EmptyUsernameException.cs" />
         <Compile Include="Controladores\LengthExceededException.cs" />
+        <Compile Include="Controladores\NoScoresSavedException.cs" />
         <Compile Include="Controladores\ScoreDAO.cs" />
         <Compile Include="Controladores\UserDAO.cs" />
         <Compile Include="Controladores\WrongKeyException.cs" />
