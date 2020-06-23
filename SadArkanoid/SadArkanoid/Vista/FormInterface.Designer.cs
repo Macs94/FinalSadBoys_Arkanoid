@@ -31,22 +31,22 @@ namespace SadArkanoid
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.userCtrlMainMenu1 = new SadArkanoid.UserCtrlMainMenu();
-            this.panel1.SuspendLayout();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // mainPanel
             // 
-            this.panel1.AutoSize = true;
-            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel1.Controls.Add(this.userCtrlMainMenu1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(681, 449);
-            this.panel1.TabIndex = 0;
+            this.mainPanel.AutoSize = true;
+            this.mainPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.mainPanel.Controls.Add(this.userCtrlMainMenu1);
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(0, 0);
+            this.mainPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(584, 389);
+            this.mainPanel.TabIndex = 0;
             // 
             // userCtrlMainMenu1
             // 
@@ -54,27 +54,28 @@ namespace SadArkanoid
             this.userCtrlMainMenu1.BackColor = System.Drawing.Color.Black;
             this.userCtrlMainMenu1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.userCtrlMainMenu1.Location = new System.Drawing.Point(0, 0);
-            this.userCtrlMainMenu1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.userCtrlMainMenu1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.userCtrlMainMenu1.Name = "userCtrlMainMenu1";
-            this.userCtrlMainMenu1.Size = new System.Drawing.Size(681, 449);
+            this.userCtrlMainMenu1.Size = new System.Drawing.Size(584, 389);
             this.userCtrlMainMenu1.TabIndex = 0;
             // 
             // FormInterface
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 449);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(584, 389);
+            this.Controls.Add(this.mainPanel);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "FormInterface";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sad Arkanoid";
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.FormInterface_Load);
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel mainPanel;
         private SadArkanoid.UserCtrlMainMenu userCtrlMainMenu1;
 
         #endregion

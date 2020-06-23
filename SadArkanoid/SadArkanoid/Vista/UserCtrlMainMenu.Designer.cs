@@ -44,13 +44,12 @@ namespace SadArkanoid
             // checkFullscreen
             // 
             this.checkFullscreen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.checkFullscreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkFullscreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.checkFullscreen.ForeColor = System.Drawing.Color.White;
-            this.checkFullscreen.Location = new System.Drawing.Point(566, 333);
+            this.checkFullscreen.Location = new System.Drawing.Point(485, 289);
             this.checkFullscreen.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkFullscreen.Name = "checkFullscreen";
-            this.checkFullscreen.Size = new System.Drawing.Size(128, 53);
+            this.checkFullscreen.Size = new System.Drawing.Size(110, 46);
             this.checkFullscreen.TabIndex = 9;
             this.checkFullscreen.Text = "FullScreen";
             this.checkFullscreen.UseVisualStyleBackColor = true;
@@ -63,13 +62,12 @@ namespace SadArkanoid
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(218, 433);
+            this.btnExit.Location = new System.Drawing.Point(187, 376);
             this.btnExit.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(264, 66);
+            this.btnExit.Size = new System.Drawing.Size(226, 57);
             this.btnExit.TabIndex = 8;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,13 +82,12 @@ namespace SadArkanoid
             this.btnHighScore.FlatAppearance.BorderSize = 0;
             this.btnHighScore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnHighScore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnHighScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnHighScore.ForeColor = System.Drawing.Color.White;
-            this.btnHighScore.Location = new System.Drawing.Point(218, 327);
+            this.btnHighScore.Location = new System.Drawing.Point(187, 284);
             this.btnHighScore.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnHighScore.Name = "btnHighScore";
-            this.btnHighScore.Size = new System.Drawing.Size(264, 66);
+            this.btnHighScore.Size = new System.Drawing.Size(226, 57);
             this.btnHighScore.TabIndex = 7;
             this.btnHighScore.Text = "High Scores";
             this.btnHighScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -106,13 +103,12 @@ namespace SadArkanoid
             this.btnPlay.FlatAppearance.BorderSize = 0;
             this.btnPlay.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnPlay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F,
-                System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(218, 221);
+            this.btnPlay.Location = new System.Drawing.Point(187, 192);
             this.btnPlay.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(264, 66);
+            this.btnPlay.Size = new System.Drawing.Size(226, 57);
             this.btnPlay.TabIndex = 6;
             this.btnPlay.Text = "Play";
             this.btnPlay.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,10 +119,10 @@ namespace SadArkanoid
             // 
             this.TitleCard.BackColor = System.Drawing.Color.Transparent;
             this.TitleCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TitleCard.Location = new System.Drawing.Point(142, 1);
+            this.TitleCard.Location = new System.Drawing.Point(122, 1);
             this.TitleCard.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.TitleCard.Name = "TitleCard";
-            this.TitleCard.Size = new System.Drawing.Size(416, 142);
+            this.TitleCard.Size = new System.Drawing.Size(356, 123);
             this.TitleCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.TitleCard.TabIndex = 5;
             this.TitleCard.TabStop = false;
@@ -135,12 +131,9 @@ namespace SadArkanoid
             // 
             this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(
-                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.TitleCard, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnPlay, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.btnHighScore, 1, 2);
@@ -151,26 +144,22 @@ namespace SadArkanoid
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.RowStyles.Add(
-                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(700, 577);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(600, 500);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // UserCtrlMainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "UserCtrlMainMenu";
-            this.Size = new System.Drawing.Size(700, 577);
+            this.Size = new System.Drawing.Size(600, 500);
             this.Load += new System.EventHandler(this.UserCtrlMainMenu_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserCtrlMainMenu_KeyPress);
             ((System.ComponentModel.ISupportInitialize) (this.TitleCard)).EndInit();
@@ -182,10 +171,9 @@ namespace SadArkanoid
         private System.Windows.Forms.Button btnHighScore;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.CheckBox checkFullscreen;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox TitleCard;
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
