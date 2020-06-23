@@ -95,6 +95,7 @@
         <Compile Include="Controladores\EmptyUsernameException.cs" />
         <Compile Include="Controladores\LengthExceededException.cs" />
         <Compile Include="Controladores\MissingFontException.cs" />
+        <Compile Include="Controladores\NoScoreSavedException.cs" />
         <Compile Include="Controladores\NullUserControlException.cs" />
         <Compile Include="Controladores\ScoreDAO.cs" />
         <Compile Include="Controladores\UserDAO.cs" />

@@ -62,7 +62,7 @@ namespace SadArkanoid
                 int I = 0;
                 List<Score> list = ScoreDAO.GetTop10();
                 if(list.Count == 0)
-                    throw new NoScoresSavedException("There are no scores at the moment");
+                    throw new NoScoreSavedException("There are no scores at the moment");
                 for (int i = 0; i < list.Count; i++)
                 {
                     labels[i] = new Label();
@@ -90,7 +90,7 @@ namespace SadArkanoid
                     labels[I].Dock = DockStyle.Fill;
                     I++;
                 }
-            }catch(NoScoresSavedException ex)
+            }catch(NoScoreSavedException ex)
             {
                 tableLayoutPanel1.Controls.Add(lblException);
                 tableLayoutPanel1.SetColumn(lblException,1);
