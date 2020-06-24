@@ -21,12 +21,12 @@ Debe que ser un nombre que contenga entre 1 y 25 caracteres.
 Se permite el uso de letras, números y caracteres especiales (Unicode).  
 Si el nombre de usuario no existe en la base de datos, se creará uno nuevo con ese nombre.
 
-4-*¿Cómo funciona el sistema de puntajes del juego?*  
+3-*¿Cómo funciona el sistema de puntajes del juego?*  
 El juego guarda el puntaje final del jugador en una base de datos al terminar una partida.  
 Si el jugador es victorioso, se agregan puntos extra al puntaje final, basados en el tiempo transcurrido y vidas restantes.   
 Si el jugador pierde, se guarda el puntaje final obtenido sin cambio alguno.
 
-5-*¿Cómo se calcula el puntaje final?*  
+4-*¿Cómo se calcula el puntaje final?*  
 Destruye bloques para conseguir puntos!
 
 Verde = 80 pts.  
