@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Drawing.Text;
 using System.Windows.Forms;
 using SadArkanoid.Controladores;
 using SadArkanoid.Modelo;
-using SadArkanoid.Properties;
 
 namespace SadArkanoid
 {
@@ -13,7 +11,7 @@ namespace SadArkanoid
     {
         //ATRIBUTOS GLOBALES
         
-        //Etiquetas que se ocuparan.
+        //Etiquetas que se ocuparán.
         Label[] labels = new Label[20];
         Label lblName = new Label();
         Label lblScore = new Label();
@@ -23,18 +21,17 @@ namespace SadArkanoid
         {
             InitializeComponent();
         }
+        
         // METODOS.
+        
         /*
-         * 
          * Método: void UserCtrlTOpTen_Load(object sender, EventArgs e)
          *
          * Función: ocurre antes de mostrar el user control.
          *
          * Descripción: asigna a btn_return y a lblTopTen la fuente personalizada y carga los labels
-         * de las máximas puntuaciones.
-         * 
+         * de las máximas puntuaciones. 
          */
-
         private void UserCtrTopTen_Load(object sender, EventArgs e)
         {
             btn_return.Font = new Font("Zorque",12);
@@ -43,6 +40,7 @@ namespace SadArkanoid
             LoadLabels();
             Dock = DockStyle.Fill;
         }
+        
         /*
          * Método: void LoadLabels()
          *
@@ -50,11 +48,7 @@ namespace SadArkanoid
          *
          * Descripción: crea dos columnas de labels en orden decreciente (puntuación más alta primero), la primera
          * columna de nombres y la segunda de puntuaciones correspondientes. Se envía una excepción la lista está vacía.
-         * 
-         * 
-         * 
          */
-
         private void LoadLabels()
         {
             try
@@ -110,8 +104,6 @@ namespace SadArkanoid
         * Función: carga labels de cabecera.
         *
         * Descripción: crea dos columnas de labels en la cabecera para fines estéticos.
-        * 
-        * 
         */
         private void LoadHeaderLabels()
         {
@@ -132,6 +124,7 @@ namespace SadArkanoid
             lblName.Dock = DockStyle.Fill;
             lblScore.Dock = DockStyle.Fill;
         }
+        
         /*
          * Método: void BtnReturn_Click(object sender, EventArgs e)
          *
@@ -139,7 +132,6 @@ namespace SadArkanoid
          *
          * Descripción: hacer click carga el user control MainMenu.
          */
-
         private void BtnReturn_Click(object sender, EventArgs e)
         {
             ((FormInterface)this.ParentForm).ChangeControl(new UserCtrlMainMenu());

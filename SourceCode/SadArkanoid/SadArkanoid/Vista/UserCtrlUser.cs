@@ -16,7 +16,7 @@ namespace SadArkanoid
             InitializeComponent();
             this.Dock = DockStyle.Fill;
         }
-        //Métodos.
+        
         /*
          * Método: void UserCtrlUser_Load(object sender, EventArgs e)
          *
@@ -26,36 +26,36 @@ namespace SadArkanoid
          * su nombre inmediatamente con la función focus. Luego se cargan varios aspectos estéticos (fuente y
          * abracamiento del espacio de cada botón y label).
          */
-        
         private void UserCtrlUser_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
             txtUsername.Font = new Font("Zorque",20);
+            
             TitleCard.BackgroundImage = Resources.ArkanoidTitle2;
             TitleCard.BackgroundImageLayout = ImageLayout.Stretch;
+            
             btnComenzar.Font = new Font("Zorque", 20.25F);
             btnReturn.Font = new Font("Zorque", 20.25F);
             txtUser.Font = new Font("Zorque", 26.25F);
             lblMessage.Font = new Font("Zorque", 9.25F );
+            
             tableLayoutPanel1.SetRow(lblMessage,1);
             tableLayoutPanel1.SetColumn(lblMessage,2);
             tableLayoutPanel1.SetColumnSpan(lblMessage,2);
             lblMessage.Dock = DockStyle.Fill;
-
-        }
+        } 
+        
         /*
-       * Método: void BtnStart_Click(object sender, EventArgs e)
-       *
-       * Función: detecta si ocurre un click en el boton Begin Arkanoid
-       *
-       * Descripción: El metodo verifica si se cumple con las restricciones de ingreso de usuario (número de caracteres
-        * adecuado). Si se cumplen registra el usuario en la BD por medio de los controladores y despliega la ventana
+        * Método: void BtnStart_Click(object sender, EventArgs e)
+        *
+        * Función: detecta si ocurre un click en el boton Begin Arkanoid
+        *
+        * Descripción: El metodo verifica si se cumple con las restricciones
+        * de ingreso de usuario (número de caracteres adecuado). Si se cumplen,
+        * registra el usuario en la BD por medio de los controladores y
+        * despliega la ventana
         * de juego.
-        * 
-       * 
-       * 
-       */
-
+        */
         private void BtnStart_Click(object sender, EventArgs e)
         {
             try
@@ -92,6 +92,7 @@ namespace SadArkanoid
                 MessageBox.Show("Error");
             }
         }
+        
         /*
          * Método: void BtnReturn_Click(object sender,EventArgs e)
          *
@@ -99,11 +100,11 @@ namespace SadArkanoid
          *
          * Descripción: cambia el user control de vuelta al MainMenu.
          */
-
         private void BtnReturn_Click(object sender, EventArgs e)
         {
             ((FormInterface)ParentForm).ChangeControl(new UserCtrlMainMenu());
         }
+        
         /*
          * Método: void UsernameKeyDown(object sender, KeyPressEventArgs e)
          *
@@ -111,7 +112,6 @@ namespace SadArkanoid
          *
          * Descripción: si el usuario presiona la tecla Intro/Enter se llama al método BtnStart_CLick.
          */
-        
         private void UsernameKeyDown(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
