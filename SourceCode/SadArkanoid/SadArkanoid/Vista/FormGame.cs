@@ -169,10 +169,12 @@ namespace SadArkanoid
                 {
                     case PictureBox b when b.Left < 0:
                         ballX = -ballX;
+                        ball.Left += ballX;
                         break;
                     
                     case PictureBox b when b.Right + 20 > Width:
                         ballX = -ballX;
+                        ball.Left += ballX;
                         break;
                     
                     case PictureBox b when b.Top < 0:
@@ -376,7 +378,8 @@ namespace SadArkanoid
                 {
                     /*Aplicar multiplier basado en el tiempo que tomo para completar
                      el juego y las vidas restantes del jugador.*/
-                    score += (score * 5 / time) * hp;
+                    score += (score * 10 / time) * hp;
+                    txtScore.Text = "SCORE: " + score;
                     
                     VictoryScreen.BackgroundImage = Resources.VictoryImg;
                     VictoryScreen.BackgroundImageLayout = ImageLayout.Stretch;

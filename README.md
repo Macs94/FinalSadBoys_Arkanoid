@@ -17,7 +17,7 @@ Luego de cargar el juego, pulsar el botón **PLAY** o la tecla **Enter** para ac
 Aparecerá el menú para ingresar su nombre de usuario y, a continuación, digitar su nombre de usuario en el área indicada y presionar el botón **BEGIN ARKANOID** o la tecla **Enter** para comenzar el juego.
 
 2-*¿Cómo escoger mi nombre de usuario?*  
-Debe que ser un nombre que contenga entre 1 y 25 caracteres.  
+Debe ser un nombre que contenga entre 1 y 25 caracteres.  
 Se permite el uso de letras, números y caracteres especiales (Unicode).  
 Si el nombre de usuario no existe en la base de datos, se creará uno nuevo con ese nombre.
 
@@ -37,7 +37,8 @@ Rojo = 90 pts.
 Plata = 50 pts.  
 
 5-*¿Cómo puedo ver mi puntaje?*  
-En la pantalla del menú principal, pulsar el botón **HIGH SCORES**. Aparecerá la pantalla de los mejores puntajes donde se muestran lo diez mejores puntajes obtenidos con el nombre del jugador que los obtuvo.
+En la pantalla del menú principal, pulsar el botón **HIGH SCORES**.  
+Aparecerá la pantalla de los mejores puntajes donde se muestran lo diez mejores puntajes obtenidos con el nombre del jugador que los obtuvo.
 
 6-*¿Cómo salir del juego y qué sucede con mi puntaje?*  
 Pulsar la tecla **Esc** para regresar al menú de inicio en el cual podrá pulsar el botón **EXIT** si desea salir de la aplicación.  
