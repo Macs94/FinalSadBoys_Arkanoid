@@ -2,9 +2,11 @@
 
 ## Integrantes
 
-Mario Andres Cálix Sosa &nbsp;&nbsp;&nbsp;00309119  
-Juan Humberto Gallardo Hernández &nbsp;00091813  
-Kevin Alexander Cea Patriz 	&nbsp;&nbsp;00203919
+<pre>
+Mario Andres Cálix Sosa 			00309119  
+Juan Humberto Gallardo Hernández 	00091813  
+Kevin Alexander Cea Patriz			00203919
+</pre>
 
 ## IDE
 
