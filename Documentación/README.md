@@ -2,9 +2,9 @@
 
 ## Integrantes
 
-Mario Andres Cálix Sosa				00309119 
-Juan Humberto Gallardo Hernández	00091813
-Kevin Alexander Cea Patriz			00203919
+Mario Andres Cálix Sosa &nbsp;&nbsp;&nbsp;00309119  
+Juan Humberto Gallardo Hernández &nbsp;00091813  
+Kevin Alexander Cea Patriz 	&nbsp;&nbsp;00203919
 
 ## IDE
 
@@ -18,7 +18,7 @@ Aparecerá el menú para ingresar su nombre de usuario y, a continuación, digit
 
 2-*¿Cómo escoger mi nombre de usuario?*  
 Debe que ser un nombre que contenga entre 1 y 25 caracteres.  
-Se permite el uso de letras, números y caracteres especiales(Unicode).  
+Se permite el uso de letras, números y caracteres especiales (Unicode).  
 Si el nombre de usuario no existe en la base de datos, se creará uno nuevo con ese nombre.
 
 4-*¿Cómo funciona el sistema de puntajes del juego?*  
@@ -37,7 +37,7 @@ Rojo = 90 pts.
 Plata = 50 pts.  
 
 5-*¿Cómo puedo ver mi puntaje?*  
-En la pantalla del menú principal, pulsar el botón *HIGH SCORES*. Aparecerá la pantalla de los mejores puntajes donde se muestran lo diez mejores puntajes obtenidos con el nombre del jugador que los obtuvo.
+En la pantalla del menú principal, pulsar el botón **HIGH SCORES**. Aparecerá la pantalla de los mejores puntajes donde se muestran lo diez mejores puntajes obtenidos con el nombre del jugador que los obtuvo.
 
 6-*¿Cómo salir del juego y qué sucede con mi puntaje?*  
 Pulsar la tecla **Esc** para regresar al menú de inicio en el cual podrá pulsar el botón **EXIT** si desea salir de la aplicación.  
